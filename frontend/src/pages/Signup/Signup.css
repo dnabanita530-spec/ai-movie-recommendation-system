@@ -1,0 +1,168 @@
+.signupPage{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(
+    135deg,
+    #050714,
+    #130028,
+    #22004d
+    );
+
+    padding:20px;
+}
+
+.signupCard{
+
+    width:520px;
+
+    background:
+    rgba(15,15,35,.9);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    padding:50px;
+}
+
+.logoSection{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.logoSection h1{
+    color:white;
+}
+
+.signupCard h2{
+
+    text-align:center;
+
+    color:white;
+
+    margin-bottom:10px;
+
+    font-size:38px;
+}
+
+.signupCard p{
+
+    text-align:center;
+
+    color:#bdbdbd;
+
+    margin-bottom:30px;
+
+    line-height:1.6;
+}
+
+.signupCard form{
+    display:flex;
+    flex-direction:column;
+}
+
+.signupCard input[type="text"],
+.signupCard input[type="email"],
+.signupCard input[type="password"]{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    margin-bottom:16px;
+
+    background:#1b1f34;
+
+    color:white;
+
+    font-size:15px;
+}
+
+.terms{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+    color:white;
+
+    font-size:14px;
+}
+
+.terms input{
+    width:18px;
+    height:18px;
+}
+
+.signupCard button{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:
+    linear-gradient(
+    90deg,
+    #6d28d9,
+    #9333ea
+    );
+}
+
+.divider{
+
+    margin:25px 0;
+
+    text-align:center;
+
+    color:#bdbdbd;
+}
+
+.googleBtn{
+
+    background:#181818 !important;
+
+    border:1px solid #2c2c2c !important;
+}
+
+.loginText{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:white;
+}
+
+.loginText a{
+
+    color:#a855f7;
+
+    margin-left:8px;
+
+    font-weight:600;
+}

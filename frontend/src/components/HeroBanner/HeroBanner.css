@@ -1,0 +1,70 @@
+.heroBanner{
+
+  height:490px;
+
+  border-radius:24px;
+
+  overflow:hidden;
+
+  background-image:
+  linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.65)
+  ),
+  url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba");
+
+  background-size:cover;
+  background-position:center;
+}
+
+.heroOverlay{
+
+  height:100%;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  padding-left:290px;
+
+  color:white;
+}
+
+.heroOverlay h1{
+
+  font-size:60px;
+
+  margin-bottom:15px;
+}
+
+.heroOverlay p{
+
+  width:500px;
+
+  font-size:18px;
+
+  margin-bottom:25px;
+
+  color:#d1d5db;
+}
+
+.heroOverlay button{
+
+  width:180px;
+
+  height:50px;
+
+  border:none;
+
+  border-radius:12px;
+
+  background:#7c3aed;
+
+  color:white;
+
+  font-size:16px;
+
+  cursor:pointer;
+}

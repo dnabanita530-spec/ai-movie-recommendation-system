@@ -1,0 +1,87 @@
+.adminReviewsPage{
+    min-height:100vh;
+    background:#050816;
+    color:white;
+    padding:30px;
+}
+
+.adminReviewsPage h1{
+    font-size:32px;
+    margin-bottom:25px;
+    font-weight:700;
+}
+
+.reviewsTable{
+    width:100%;
+    border-collapse:collapse;
+    background:#111827;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.reviewsTable thead{
+    background:#8b5cf6;
+}
+
+.reviewsTable th{
+    padding:16px;
+    text-align:left;
+    color:white;
+    font-size:15px;
+    font-weight:600;
+}
+
+.reviewsTable td{
+    padding:16px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    color:#e5e7eb;
+    vertical-align:top;
+}
+
+.reviewsTable tbody tr:hover{
+    background:rgba(139,92,246,.08);
+}
+
+.reviewsTable tbody tr:last-child td{
+    border-bottom:none;
+}
+
+.deleteBtn{
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:13px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.deleteBtn:hover{
+    background:#dc2626;
+    transform:translateY(-2px);
+}
+
+.ratingBadge{
+    background:#10b981;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.reviewText{
+    max-width:400px;
+    white-space:normal;
+    line-height:1.5;
+    color:#d1d5db;
+}
+
+.emptyReviews{
+    text-align:center;
+    padding:40px;
+    color:#9ca3af;
+    font-size:18px;
+}

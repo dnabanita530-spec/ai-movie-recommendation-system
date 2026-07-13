@@ -1,0 +1,35 @@
+.recommendationPage{
+    min-height:100vh;
+    background:#050816;
+    color:white;
+    padding:30px;
+}
+
+.recommendationPage h1{
+    margin-bottom:25px;
+}
+
+.recommendationTable{
+    width:100%;
+    border-collapse:collapse;
+    background:#111827;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.recommendationTable th{
+    background:#8b5cf6;
+    padding:15px;
+    text-align:left;
+}
+
+.recommendationTable td{
+    padding:15px;
+    border-bottom:
+    1px solid rgba(255,255,255,.08);
+}
+
+.recommendationTable tr:hover{
+    background:
+    rgba(139,92,246,.08);
+}

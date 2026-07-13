@@ -1,0 +1,88 @@
+.smartPage{
+  min-height:100vh;
+  background:#050816;
+  color:white;
+  padding:30px;
+}
+
+.searchSection{
+  display:flex;
+  gap:15px;
+  margin-top:20px;
+  margin-bottom:30px;
+}
+
+.searchSection input{
+  flex:1;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:#111827;
+  color:white;
+}
+
+.searchSection button{
+  padding:12px 25px;
+  border:none;
+  border-radius:10px;
+  background:#8b5cf6;
+  color:white;
+  cursor:pointer;
+}
+
+.movieGrid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fill,minmax(220px,1fr));
+  gap:25px;
+}
+.statsBox{
+  background:#111827;
+  padding:20px;
+  border-radius:15px;
+  margin-bottom:25px;
+  color:white;
+}
+
+.statsBox h3{
+  margin-bottom:15px;
+  color:#8b5cf6;
+}
+
+.statsBox p{
+  margin:8px 0;
+}
+
+.movieLink{
+  text-decoration:none;
+  color:white;
+}
+
+.tmdbCard{
+  display:flex;
+  gap:30px;
+  margin-top:30px;
+  padding:20px;
+  background:#111827;
+  border-radius:16px;
+  color:white;
+}
+
+.tmdbCard img{
+  width:250px;
+  border-radius:12px;
+  object-fit:cover;
+}
+
+.tmdbInfo{
+  flex:1;
+}
+
+.tmdbInfo h2{
+  margin-bottom:10px;
+}
+
+.tmdbInfo p{
+  margin-bottom:12px;
+  line-height:1.6;
+}

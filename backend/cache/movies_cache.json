@@ -1,0 +1,902 @@
+[
+    {
+        "movieId": 1,
+        "title": "Toy Story (1995)",
+        "genres": "Adventure|Animation|Children|Comedy|Fantasy",
+        "poster": "https://image.tmdb.org/t/p/w500/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg",
+        "rating": 8.0,
+        "overview": "Led by Woody, Andy's toys live happily in his room until Andy's birthday brings Buzz Lightyear onto the scene. Afraid of losing his place in Andy's heart, Woody plots against Buzz. But when circumstances separate Buzz and Woody from their owner, the duo eventually learns to put aside their differences.",
+        "release_date": "1995-11-22"
+    },
+    {
+        "movieId": 2,
+        "title": "Jumanji (1995)",
+        "genres": "Adventure|Children|Fantasy",
+        "poster": "https://image.tmdb.org/t/p/w500/iWV47r6kFneCiApgrMII5HSkfHw.jpg",
+        "rating": 7.2,
+        "overview": "When siblings Judy and Peter discover an enchanted board game that opens the door to a magical world, they unwittingly invite Alan -- an adult who's been trapped inside the game for 26 years -- into their living room. Alan's only hope for freedom is to finish the game, which proves risky as all three find themselves running from giant rhinoceroses, evil monkeys and other terrifying creatures.",
+        "release_date": "1995-12-15"
+    },
+    {
+        "movieId": 3,
+        "title": "Grumpier Old Men (1995)",
+        "genres": "Comedy|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/1FSXpj5e8l4KH6nVFO5SPUeraOt.jpg",
+        "rating": 6.5,
+        "overview": "A family wedding reignites the ancient feud between next-door neighbors and fishing buddies John and Max. Meanwhile, a sultry Italian divorc\u00e9e opens a restaurant at the local bait shop, alarming the locals who worry she'll scare the fish away. But she's less interested in seafood than she is in cooking up a hot time with Max.",
+        "release_date": "1995-12-22"
+    },
+    {
+        "movieId": 4,
+        "title": "Waiting to Exhale (1995)",
+        "genres": "Comedy|Drama|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/4wjGMwPsdlvi025ZqR4rXnFDvBz.jpg",
+        "rating": 6.3,
+        "overview": "Cheated on, mistreated and stepped on, the women are holding their breath, waiting for the elusive \"good man\" to break a string of less-than-stellar lovers. Friends and confidants Vannah, Bernie, Glo and Robin talk it all out, determined to find a better way to breathe.",
+        "release_date": "1995-12-22"
+    },
+    {
+        "movieId": 5,
+        "title": "Father of the Bride Part II (1995)",
+        "genres": "Comedy",
+        "poster": "https://image.tmdb.org/t/p/w500/rj4LBtwQ0uGrpBnCELr716Qo3mw.jpg",
+        "rating": 6.3,
+        "overview": "Just when George Banks has recovered from his daughter's wedding, he receives the news that she's pregnant ... and that George's wife is expecting too. He was planning on selling their home, but that's a plan that\u2014like George\u2014will have to change with the arrival of both a grandchild and a kid of his own.",
+        "release_date": "1995-12-08"
+    },
+    {
+        "movieId": 6,
+        "title": "Heat (1995)",
+        "genres": "Action|Crime|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/e09dLw1Ljtccd2P4NsuUvVtS5du.jpg",
+        "rating": 7.9,
+        "overview": "Obsessive master thief Neil McCauley leads a top-notch crew on various daring heists throughout Los Angeles while determined detective Vincent Hanna pursues him without rest. Each man recognizes and respects the ability and the dedication of the other even though they are aware their cat-and-mouse game may end in violence.",
+        "release_date": "1995-12-15"
+    },
+    {
+        "movieId": 7,
+        "title": "Sabrina (1995)",
+        "genres": "Comedy|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/i8PbLJDPU7vCwwscWD625oHbJy.jpg",
+        "rating": 6.2,
+        "overview": "After her return from school in Paris, a playboy finally takes notice of his family's chauffeur's daughter Sabrina, who's long had a crush on him, but he questions his more serious brother's motives when he warns against getting involved with her.",
+        "release_date": "1995-12-15"
+    },
+    {
+        "movieId": 8,
+        "title": "Tom and Huck (1995)",
+        "genres": "Adventure|Children",
+        "poster": "https://image.tmdb.org/t/p/w500/bMY31ikEOIPOHqQwhPhII8UVBln.jpg",
+        "rating": 5.3,
+        "overview": "A mischievous young boy, Tom Sawyer, witnesses a murder by the deadly Injun Joe. Tom becomes friends with Huckleberry Finn, a boy with no future and no family. Tom has to choose between honoring a friendship or honoring an oath because the town alcoholic is accused of the murder. Tom and Huck go through several adventures trying to retrieve evidence.",
+        "release_date": "1995-12-22"
+    },
+    {
+        "movieId": 9,
+        "title": "Sudden Death (1995)",
+        "genres": "Action",
+        "poster": "https://image.tmdb.org/t/p/w500/1pylO6YX5XdOA6QCc5IRxrrffkg.jpg",
+        "rating": 6.0,
+        "overview": "When a man's daughter is suddenly taken during a championship hockey game \u2013 with the captors demanding a billion dollars by game's end \u2013 he frantically sets a plan in motion to rescue her and abort an impending explosion before the final buzzer.",
+        "release_date": "1995-10-27"
+    },
+    {
+        "movieId": 10,
+        "title": "GoldenEye (1995)",
+        "genres": "Action|Adventure|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/z0ljRnNxIO7CRBhLEO0DvLgAFPR.jpg",
+        "rating": 6.9,
+        "overview": "When a powerful secret defense system is stolen, James Bond is assigned to stop a Russian crime syndicate from using it.",
+        "release_date": "1995-11-16"
+    },
+    {
+        "movieId": 11,
+        "title": "American President, The (1995)",
+        "genres": "Comedy|Drama|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/yObOAYFIHXHkFPQ3jhgkN2ezaD.jpg",
+        "rating": 6.5,
+        "overview": "Widowed U.S. president Andrew Shepherd, one of the world's most powerful men, can have anything he wants -- and what he covets most is Sydney Ellen Wade, a Washington lobbyist. But Shepherd's attempts at courting her spark wild rumors and decimate his approval ratings.",
+        "release_date": "1995-11-17"
+    },
+    {
+        "movieId": 12,
+        "title": "Dracula: Dead and Loving It (1995)",
+        "genres": "Comedy|Horror",
+        "poster": "https://image.tmdb.org/t/p/w500/4rRfZz8YnHNRr16t3CFcJrPdXHi.jpg",
+        "rating": 6.1,
+        "overview": "When a lawyer shows up at the vampire's doorstep, he falls prey to his charms and joins him in his search for fresh blood. Enter Professor Van Helsing, who may be the only one able to vanquish the Count.",
+        "release_date": "1995-12-22"
+    },
+    {
+        "movieId": 13,
+        "title": "Balto (1995)",
+        "genres": "Adventure|Animation|Children",
+        "poster": "https://image.tmdb.org/t/p/w500/dCVcdb5oxDizqFLz0F7TE60NoC9.jpg",
+        "rating": 7.3,
+        "overview": "An outcast half-wolf risks his life to prevent a deadly epidemic from ravaging Nome, Alaska.",
+        "release_date": "1995-12-22"
+    },
+    {
+        "movieId": 14,
+        "title": "Nixon (1995)",
+        "genres": "Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/cz2MTGr2wpDZLirgV2rGHBdA2t3.jpg",
+        "rating": 6.8,
+        "overview": "A look at President Richard M. Nixon\u2014a man carrying the fate of the world on his shoulders while battling the self-destructive demands from within\u2014spanning his troubled boyhood in California to the shocking Watergate scandal that would end his Presidency.",
+        "release_date": "1995-12-22"
+    },
+    {
+        "movieId": 15,
+        "title": "Cutthroat Island (1995)",
+        "genres": "Action|Adventure|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/hYdeBZ4BFXivdouxLfQGWNE6zRx.jpg",
+        "rating": 5.8,
+        "overview": "Morgan Adams and her slave, William Shaw, are on a quest to recover the three portions of a treasure map. Unfortunately, the final portion is held by her murderous uncle, Dawg. Her crew is skeptical of her leadership abilities, so she must complete her quest before they mutiny against her. This is made yet more difficult by the efforts of the British crown to end her pirate raids.",
+        "release_date": "1995-12-22"
+    },
+    {
+        "movieId": 16,
+        "title": "Casino (1995)",
+        "genres": "Crime|Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/gziIkUSnYuj9ChCi8qOu2ZunpSC.jpg",
+        "rating": 8.0,
+        "overview": "In Las Vegas, two best friends--a casino executive and a Mafia enforcer--compete for a gambling empire and a fast-living, fast-loving socialite.",
+        "release_date": "1995-11-22"
+    },
+    {
+        "movieId": 17,
+        "title": "Sense and Sensibility (1995)",
+        "genres": "Drama|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/9YdQ73YmvInxpXZVNjEKePw9tRO.jpg",
+        "rating": 7.4,
+        "overview": "The Dashwood sisters, sensible Elinor and passionate Marianne, learn that their prospects of marriage seem doomed by their family's sudden loss of fortune. After Henry Dashwood dies unexpectedly, his estate must pass on by law to his son. These circumstances leave Mr. Dashwood's wife and daughters without a home and with barely enough money to live on. As Elinor and Marianne struggle to find romantic fulfillment in a society obsessed with financial and social status, they must learn to mix sense with sensibility in their dealings with both money and men.",
+        "release_date": "1995-12-13"
+    },
+    {
+        "movieId": 18,
+        "title": "Four Rooms (1995)",
+        "genres": "Comedy",
+        "poster": "https://image.tmdb.org/t/p/w500/75aHn1NOYXh4M7L5shoeQ6NGykP.jpg",
+        "rating": 5.9,
+        "overview": "It's Ted the Bellhop's first night on the job...and the hotel's very unusual guests are about to place him in some outrageous predicaments. It seems that this evening's room service is serving up one unbelievable happening after another.",
+        "release_date": "1995-12-09"
+    },
+    {
+        "movieId": 19,
+        "title": "Ace Ventura: When Nature Calls (1995)",
+        "genres": "Comedy",
+        "poster": "https://image.tmdb.org/t/p/w500/wcinCf1ov2D6M3P7BBZkzQFOiIb.jpg",
+        "rating": 6.3,
+        "overview": "Summoned from an ashram in Tibet, Ace finds himself on a perilous journey into the jungles of Africa to find Shikaka, the missing sacred animal of the friendly Wachati tribe. He must accomplish this before the wedding of the Wachati's Princess to the prince of the warrior Wachootoos. If Ace fails, the result will be a vicious tribal war.",
+        "release_date": "1995-11-10"
+    },
+    {
+        "movieId": 20,
+        "title": "Money Train (1995)",
+        "genres": "Action|Comedy|Crime|Drama|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/jWBDz6Mf9aQVBiUS76JQsEhvoJl.jpg",
+        "rating": 5.9,
+        "overview": "When a vengeful New York transit cop decides to steal a trainload of subway fares, his foster brother\u2014a fellow cop\u2014tries to protect him.",
+        "release_date": "1995-11-21"
+    },
+    {
+        "movieId": 21,
+        "title": "Get Shorty (1995)",
+        "genres": "Comedy|Crime|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/r82SdPhg4fnIcLt0ogIjQxqjdcO.jpg",
+        "rating": 6.5,
+        "overview": "Chili Palmer is a Miami mobster who gets sent to L.A. to collect a bad debt from Harry Zimm, a Hollywood producer who specializes in cheesy horror films. When Chili meets Harry's leading lady, the romantic sparks fly. After pitching his own life story as a movie idea, Chili learns that being a mobster and being a Hollywood producer really aren't all that different.",
+        "release_date": "1995-10-20"
+    },
+    {
+        "movieId": 22,
+        "title": "Copycat (1995)",
+        "genres": "Crime|Drama|Horror|Mystery|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/oMgwJb016znNZcpDR20eXxZoW8A.jpg",
+        "rating": 6.5,
+        "overview": "An agoraphobic psychologist and a female detective must work together to take down a serial killer who copies serial killers from the past.",
+        "release_date": "1995-10-27"
+    },
+    {
+        "movieId": 23,
+        "title": "Assassins (1995)",
+        "genres": "Action|Crime|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/wPmZYnaQpxwoHmwNwVhZ2IY0UbF.jpg",
+        "rating": 6.5,
+        "overview": "Assassin Robert Rath arrives at a funeral to kill a prominent mobster, only to witness a rival hired gun complete the job for him -- with grisly results. Horrified by the murder of innocent bystanders, Rath decides to take one last job and then return to civilian life. But finding his way out of the world of contract killing grows ever more dangerous as Rath falls for his female target and becomes a marked man himself.",
+        "release_date": "1995-10-06"
+    },
+    {
+        "movieId": 24,
+        "title": "Powder (1995)",
+        "genres": "Drama|Sci-Fi",
+        "poster": "https://image.tmdb.org/t/p/w500/aQSA63T7zyzZxBZxr2MQaxt1gtO.jpg",
+        "rating": 7.0,
+        "overview": "Harassed by classmates who won't accept his shocking appearance, a shy young man known as \"Powder\" struggles to fit in. But the cruel taunts stop when Powder displays a mysterious power that allows him to do incredible things. This phenomenon changes the lives of all those around him in ways they never could have imagined.",
+        "release_date": "1995-10-27"
+    },
+    {
+        "movieId": 25,
+        "title": "Leaving Las Vegas (1995)",
+        "genres": "Drama|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/wTrFpGe3U65kXTldIUxuM2hmOAK.jpg",
+        "rating": 7.3,
+        "overview": "Ben Sanderson, an alcoholic Hollywood screenwriter who lost everything because of his drinking, arrives in Las Vegas to drink himself to death. There, he meets and forms an uneasy friendship and non-interference pact with prostitute Sera.",
+        "release_date": "1995-10-27"
+    },
+    {
+        "movieId": 26,
+        "title": "Othello (1995)",
+        "genres": "Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/kyevuYzW36wKadiE8lftLac5VwQ.jpg",
+        "rating": 6.4,
+        "overview": "The evil Iago pretends to be friend of Othello in order to manipulate him to serve his own end in the film version of this Shakespeare classic.",
+        "release_date": "1995-12-15"
+    },
+    {
+        "movieId": 27,
+        "title": "Now and Then (1995)",
+        "genres": "Children|Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/q31Ks8oAmM4Nq2CcGjyYYpdBAmh.jpg",
+        "rating": 6.9,
+        "overview": "Waxing nostalgic about the bittersweet passage from childhood to puberty, four childhood girlfriends \u2014 Teeny, Chrissy, Samantha and Roberta \u2014 recall the magical summer of 1970. During their walk down memory lane, they reconcile experiences with boys, secrets, bullies and more.",
+        "release_date": "1995-10-20"
+    },
+    {
+        "movieId": 28,
+        "title": "Persuasion (1995)",
+        "genres": "Drama|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/10hycdhFLq3M3y0ONxIMSiY8Mrs.jpg",
+        "rating": 7.2,
+        "overview": "In early 19th-century England, dire financial straits reacquaint the aristocratic Anne Elliot with her wealthy ex-fiance Frederick Wentworth. The two must choose between either putting the past behind them or listening to their hearts.",
+        "release_date": "1995-05-01"
+    },
+    {
+        "movieId": 29,
+        "title": "City of Lost Children, The (Cit\u00e9 des enfants perdus, La) (1995)",
+        "genres": "Adventure|Drama|Fantasy|Mystery|Sci-Fi",
+        "poster": "https://image.tmdb.org/t/p/w500/whwT3Q9JxbAYzEc3t7uYYcCbTMf.jpg",
+        "rating": 7.2,
+        "overview": "A scientist in a surrealist society kidnaps children to steal their dreams, hoping that they slow his aging process.",
+        "release_date": "1995-05-17"
+    },
+    {
+        "movieId": 30,
+        "title": "Shanghai Triad (Yao a yao yao dao waipo qiao) (1995)",
+        "genres": "Crime|Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/tzG1UxUSfPACREjgBrsPDRUvneH.jpg",
+        "rating": 6.8,
+        "overview": "Shanghai, China, 1930. When young Shuisheng arrives from the countryside, his uncle Liushu puts him at the service of Bijou, the mistress of Laoda, supreme boss of the Tang Triad, constantly threatened by his enemies, both those he knows and those lurking in the shadows.",
+        "release_date": "1995-09-14"
+    },
+    {
+        "movieId": 31,
+        "title": "Dangerous Minds (1995)",
+        "genres": "Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/yWHWC8fJRp2kLgiFrEa8o3krOH9.jpg",
+        "rating": 7.0,
+        "overview": "Former Marine Louanne Johnson lands a gig teaching in a pilot program for bright but underachieving teens at a notorious inner-city high school. After having a terrible first day, she decides she must throw decorum to the wind. When Johnson returns to the classroom, she does so armed with a no-nonsense attitude informed by her military training and a fearless determination to better the lives of her students -- no matter what the cost.",
+        "release_date": "1995-08-11"
+    },
+    {
+        "movieId": 32,
+        "title": "Twelve Monkeys (a.k.a. 12 Monkeys) (1995)",
+        "genres": "Mystery|Sci-Fi|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/gt3iyguaCIw8DpQZI1LIN5TohM2.jpg",
+        "rating": 7.6,
+        "overview": "In the year 2035, convict James Cole reluctantly volunteers to be sent back in time to discover the origin of a deadly virus that wiped out nearly all of the earth's population and forced the survivors into underground communities. But when Cole is mistakenly sent to 1990 instead of 1996, he's arrested and locked up in a mental hospital. There he meets psychiatrist Dr. Kathryn Railly and the son of a famous virus expert who may hold the key to the Army of the 12 Monkeys; thought to be responsible for unleashing the killer disease.",
+        "release_date": "1995-12-29"
+    },
+    {
+        "movieId": 34,
+        "title": "Babe (1995)",
+        "genres": "Children|Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/zKuQMtnbVTz9DsOnOJmlW71v4qH.jpg",
+        "rating": 6.3,
+        "overview": "Babe is a little pig who doesn't quite know his place in the world. With a bunch of odd friends, like Ferdinand the duck who thinks he is a rooster and Fly the dog he calls mum, Babe realises that he has the makings to become the greatest sheep pig of all time, and Farmer Hoggett knows it. With the help of the sheep dogs, Babe learns that a pig can be anything that he wants to be.",
+        "release_date": "1995-07-18"
+    },
+    {
+        "movieId": 36,
+        "title": "Dead Man Walking (1995)",
+        "genres": "Crime|Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/eShxyjhWoFl3BwsuEmVsr4nLaMZ.jpg",
+        "rating": 7.3,
+        "overview": "A death row inmate turns for spiritual guidance to a local nun in the days leading up to his scheduled execution for the murders of a young couple.",
+        "release_date": "1995-12-29"
+    },
+    {
+        "movieId": 38,
+        "title": "It Takes Two (1995)",
+        "genres": "Children|Comedy",
+        "poster": "https://image.tmdb.org/t/p/w500/4CptjFLiIJXtjc3dykS7vkEHMbw.jpg",
+        "rating": 6.5,
+        "overview": "Identical 9-year-olds from very different backgrounds: orphaned Amanda and wealthy Alyssa meet at summer camp and decide to switch places -- and play matchmaker between Alyssa's dad, Roger, and the kind social worker who cares for Amanda.",
+        "release_date": "1995-11-17"
+    },
+    {
+        "movieId": 39,
+        "title": "Clueless (1995)",
+        "genres": "Comedy|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/8AwVTcgpTnmeOs4TdTWqcFDXEsA.jpg",
+        "rating": 7.3,
+        "overview": "Shallow, rich and socially successful Cher is at the top of her Beverly Hills high school's pecking scale. Seeing herself as a matchmaker, Cher first coaxes two teachers into dating each other. Emboldened by her success, she decides to give hopelessly klutzy new student Tai a makeover. When Tai becomes more popular than she is, Cher realizes that her disapproving ex-stepbrother was right about how misguided she was -- and falls for him.",
+        "release_date": "1995-07-19"
+    },
+    {
+        "movieId": 40,
+        "title": "Cry, the Beloved Country (1995)",
+        "genres": "Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/96TZr6o4kuiIEryC5jkzaQoP6m5.jpg",
+        "rating": 6.8,
+        "overview": "A South-African preacher goes to search for his wayward son who has committed a crime in the big city.",
+        "release_date": "1995-12-15"
+    },
+    {
+        "movieId": 41,
+        "title": "Richard III (1995)",
+        "genres": "Drama|War",
+        "poster": "https://image.tmdb.org/t/p/w500/cBg1AMH1ucPsDlNMfcHlrreQXQX.jpg",
+        "rating": 6.8,
+        "overview": "Having helped his brother King Edward IV take the throne of England, the jealous hunchback Richard, Duke of Gloucester, plots to seize power for himself. Masterfully deceiving and plotting against nearly everyone in the royal court, including his eventual wife, Lady Anne, and his brother George, Duke of Clarence, Richard orchestrates a bloody rise to power before finding all his gains jeopardized by those he betrayed.",
+        "release_date": "1995-12-29"
+    },
+    {
+        "movieId": 42,
+        "title": "Dead Presidents (1995)",
+        "genres": "Action|Crime|Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/eGfsSXizR11tTHVo0kuOOFPAxZt.jpg",
+        "rating": 6.7,
+        "overview": "On the streets they call cash dead presidents. And that's just what a Vietnam veteran is after when he returns home from the war only to find himself drawn into a life of crime. With the aid of his fellow vets he plans the ultimate heist -- a daring robbery of an armored car filled with unmarked U.S. currency!",
+        "release_date": "1995-09-29"
+    },
+    {
+        "movieId": 43,
+        "title": "Restoration (1995)",
+        "genres": "Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/z1YM3WFZnF2NwHT5IRGYUcvZBSl.jpg",
+        "rating": 6.1,
+        "overview": "An aspiring young physician, Robert Merivel found himself in the service of King Charles II and saves the life of someone close to the King. Merivel joins the King's court and lives the high life provided to someone of his position. Merivel is ordered to marry his King's mistress in order to divert the queens suspicions. He is given one order by the king and that is not to fall in love. The situation worsens when Merivel finds himself in love with his new wife. Eventually, the King finds out and relieves Merivel of his position and wealth. His fall from grace leaves Merivel where he first started. And through his travels and reunions with an old friend, he rediscovers his love for true medicine and what it really means to be a physician.",
+        "release_date": "1995-12-29"
+    },
+    {
+        "movieId": 44,
+        "title": "Mortal Kombat (1995)",
+        "genres": "Action|Adventure|Fantasy",
+        "poster": "https://image.tmdb.org/t/p/w500/9YhpvhhvLrtL1wlwEfpVL16GI9d.jpg",
+        "rating": 5.9,
+        "overview": "For nine generations an evil sorcerer has been victorious in hand-to-hand battle against his mortal enemies. If he wins a tenth Mortal Kombat tournament, desolation and evil will reign over the multiverse forever. To save Earth, three warriors must overcome seemingly insurmountable odds, their own inner demons, and superhuman foes.",
+        "release_date": "1995-08-18"
+    },
+    {
+        "movieId": 45,
+        "title": "To Die For (1995)",
+        "genres": "Comedy|Drama|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/whz4bwvqE1OmQHIyqHdZD8jU9CO.jpg",
+        "rating": 6.6,
+        "overview": "Suzanne Stone wants to be a world-famous news anchor and she is willing to do anything to get what she wants. What she lacks in intelligence, she makes up for in cold determination and diabolical wiles. As she pursues her goal with relentless focus, she is forced to destroy anything and anyone that may stand in her way, regardless of the ultimate cost or means necessary.",
+        "release_date": "1995-09-22"
+    },
+    {
+        "movieId": 46,
+        "title": "How to Make an American Quilt (1995)",
+        "genres": "Drama|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/pI9UAemlWgdrnjRgYJsbTk8BSJc.jpg",
+        "rating": 6.4,
+        "overview": "Soon-to-be-wed graduate student Finn Dodd develops cold feet when she suspects her fianc\u00e9 is cheating on her. In order to clear her head, Finn visits her grandmother, Hy, and great aunt, Glady Joe Cleary, in Grasse, Calif. There, Finn learns that Hy and Glady Joe are members of a group of passionate quilters, and over the course of her visit she is regaled with tales of love and life by women who have collected rich experiences and much wisdom.",
+        "release_date": "1995-10-06"
+    },
+    {
+        "movieId": 47,
+        "title": "Seven (a.k.a. Se7en) (1995)",
+        "genres": "Mystery|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/191nKfP0ehp3uIvWqgPbFmI4lv9.jpg",
+        "rating": 8.4,
+        "overview": "Two homicide detectives are on a desperate hunt for a serial killer whose crimes are based on the \"seven deadly sins\" in this dark and haunting film that takes viewers from the tortured remains of one victim to the next. The seasoned Det. Somerset researches each sin in an effort to get inside the killer's mind, while his novice partner, Mills, scoffs at his efforts to unravel the case.",
+        "release_date": "1995-09-22"
+    },
+    {
+        "movieId": 48,
+        "title": "Pocahontas (1995)",
+        "genres": "Animation|Children|Drama|Musical|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/kZ1ft0QZ4e3zDUPMBftEkwI9ftd.jpg",
+        "rating": 6.9,
+        "overview": "Pocahontas, daughter of a Native American tribe chief, falls in love with an English soldier as colonists invade 17th century Virginia.",
+        "release_date": "1995-06-16"
+    },
+    {
+        "movieId": 49,
+        "title": "When Night Is Falling (1995)",
+        "genres": "Drama|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/6Ac5GLwJ01uli5mCXqXwquR36Y1.jpg",
+        "rating": 6.3,
+        "overview": "Camille is a professor at a Protestant college and is in a long-term relationship with Martin, a respected minister and fellow professor. When Camille meets Petra, a bold and flamboyant performer in a circus troupe, she is inexplicably drawn. Pursuing Petra, Camille throws her whole conservative life into disarray.",
+        "release_date": "1995-02-01"
+    },
+    {
+        "movieId": 50,
+        "title": "Usual Suspects, The (1995)",
+        "genres": "Crime|Mystery|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/99X2SgyFunJFXGAYnDv3sb9pnUD.jpg",
+        "rating": 8.2,
+        "overview": "Held in an L.A. interrogation room, Verbal Kint attempts to convince the feds that a mythic crime lord, Keyser Soze, not only exists, but was also responsible for drawing him and his four partners into a multi-million dollar heist that ended with an explosion in San Pedro harbor \u2013 leaving few survivors. Verbal lures his interrogators with an incredible story of the crime lord's almost supernatural prowess.",
+        "release_date": "1995-07-19"
+    },
+    {
+        "movieId": 52,
+        "title": "Mighty Aphrodite (1995)",
+        "genres": "Comedy|Drama|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/ice135yQZp4iX2SgCmd90nKgS5j.jpg",
+        "rating": 6.7,
+        "overview": "When Lenny and his wife, Amanda, adopt a baby, Lenny realizes that his son is a genius and becomes obsessed with finding the boy's biological mother in hopes that she will be brilliant too. But when he learns that Max's mother is Linda Ash, a kindhearted prostitute and porn star, Lenny is determined to reform her immoral lifestyle. A Greek chorus chimes in to relate the plot to Greek mythology in this quirky comedy.",
+        "release_date": "1995-09-13"
+    },
+    {
+        "movieId": 53,
+        "title": "Lamerica (1994)",
+        "genres": "Adventure|Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/nnLpA4mqb3gvhNJQZ00cOyBmeq3.jpg",
+        "rating": 7.1,
+        "overview": "Fiore, an Italian conman, arrives in post Communist Albania with Gino, his young apprentice, to set up a shoe factory that will never open. The con requires a native Albanian, so they designate Spiro, an impoverished and confused former political prisoner as chairman of the board. When Fiore returns to Italy to get government funds for the project, Spiro unexpectedly disappears and Gino sets out on a journey to find him. The search leads him to discover Spiro's tragic personal history and witness Albanian poverty firsthand.",
+        "release_date": "1994-09-09"
+    },
+    {
+        "movieId": 54,
+        "title": "Big Green, The (1995)",
+        "genres": "Children|Comedy",
+        "poster": "https://image.tmdb.org/t/p/w500/nVHqIuBTcTLmAIrML7T704UwfNI.jpg",
+        "rating": 5.6,
+        "overview": "In a depressed Texas town, British foreign exchange teacher Anna attempts to inject some life into her hopeless kids by introducing them to soccer. They're terrible at first, but Anna and her football-hero assistant whip them into shape. As they work overtime, the pair help kids build their self-esteem and also get involved in solving family squabbles.",
+        "release_date": "1995-09-29"
+    },
+    {
+        "movieId": 55,
+        "title": "Georgia (1995)",
+        "genres": "Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/uXjfK404xo7SiVlFcAoRyaFqXR4.jpg",
+        "rating": 5.7,
+        "overview": "Sadie looks up to her older sister Georgia, a successful folk singer. Unfortunately it is this very obsession \u2014 coupled with her self-destructive tendencies and rampant drug abuse \u2014 that keeps her spiraling down the drain.",
+        "release_date": "1995-05-19"
+    },
+    {
+        "movieId": 57,
+        "title": "Home for the Holidays (1995)",
+        "genres": "Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/3zqlKdOttWyExzopVxglz50Vjxq.jpg",
+        "rating": 6.3,
+        "overview": "After losing her job, making out with her soon-to-be former boss, and finding out that her daughter plans to spend Thanksgiving with her boyfriend, Claudia Larson faces spending the holiday with her unhinged family.",
+        "release_date": "1995-11-02"
+    },
+    {
+        "movieId": 58,
+        "title": "Postman, The (Postino, Il) (1994)",
+        "genres": "Comedy|Drama|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/cUaCpjVDefYShKyLmkcDsiPaBHn.jpg",
+        "rating": 7.9,
+        "overview": "Simple Italian postman learns to love poetry while delivering mail to a famous poet; he uses this to woo local beauty Beatrice.",
+        "release_date": "1994-09-22"
+    },
+    {
+        "movieId": 60,
+        "title": "Indian in the Cupboard, The (1995)",
+        "genres": "Adventure|Children|Fantasy",
+        "poster": "https://image.tmdb.org/t/p/w500/ozQAmW85tTJu2dhRe3evzyY03Nb.jpg",
+        "rating": 6.5,
+        "overview": "A nine-year-old boy gets a plastic Indian and a cupboard for his birthday and finds himself involved in adventure when the Indian comes to life and befriends him.",
+        "release_date": "1995-07-14"
+    },
+    {
+        "movieId": 61,
+        "title": "Eye for an Eye (1996)",
+        "genres": "Drama|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/y2lZSdJ1o0VvLegTw3ad6KFtxra.jpg",
+        "rating": 6.3,
+        "overview": "It's fire and brimstone time as grieving mother Karen McCann takes justice into her own hands when a kangaroo court in Los Angeles fails to convict Robert Doob, the monster who raped and murdered her 17-year-old daughter.",
+        "release_date": "1996-01-12"
+    },
+    {
+        "movieId": 62,
+        "title": "Mr. Holland's Opus (1995)",
+        "genres": "Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/kBmwWeSN3ajnYHZ3dSybEobxEPI.jpg",
+        "rating": 7.0,
+        "overview": "In 1965, passionate musician Glenn Holland takes a day job as a high school music teacher, convinced it's just a small obstacle on the road to his true calling: writing a historic opus. As the decades roll by with the composition unwritten but generations of students inspired through his teaching, Holland must redefine his life's purpose.",
+        "release_date": "1995-12-29"
+    },
+    {
+        "movieId": 63,
+        "title": "Don't Be a Menace to South Central While Drinking Your Juice in the Hood (1996)",
+        "genres": "Comedy|Crime",
+        "poster": "https://image.tmdb.org/t/p/w500/HZQBF7JDd2e9p4rPSbSHuWHaCC.jpg",
+        "rating": 7.0,
+        "overview": "When Ashtray moves to South Central L.A. to live with his father (who appears to be the same age he is) and grandmother (who likes to talk tough and smoke reefer), he falls in with his gang-banging cousin Loc Dog, who along with the requisite pistols and Uzi carries a thermo-nuclear warhead for self-defense. Will Ashtray be able to keep living the straight life?",
+        "release_date": "1996-01-12"
+    },
+    {
+        "movieId": 64,
+        "title": "Two if by Sea (1996)",
+        "genres": "Comedy|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/xSfqAMYqrTtDeAjPtYo0S8nc5Zz.jpg",
+        "rating": 5.0,
+        "overview": "Frank O'Brien, a petty thief, and his 7-year-long girlfriend Roz want to put an end to their unsteady lifestyle and just do that last job, which involves stealing a valuable painting. Frank takes Roz to an island on the coast of New England, where he wants to sell the painting and also hopes that their sagging relationship will get a positive push back up. Not everything goes as planned.",
+        "release_date": "1996-01-12"
+    },
+    {
+        "movieId": 65,
+        "title": "Bio-Dome (1996)",
+        "genres": "Comedy",
+        "poster": "https://image.tmdb.org/t/p/w500/pjSkGZAvksrbO6tGain8PJ3rfC7.jpg",
+        "rating": 4.6,
+        "overview": "Moronic best friends get themselves locked inside the Bio-Dome, a science experiment, along with a group of environmental scientists for one year.",
+        "release_date": "1996-01-12"
+    },
+    {
+        "movieId": 66,
+        "title": "Lawnmower Man 2: Beyond Cyberspace (1996)",
+        "genres": "Action|Sci-Fi|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/aP8eGsCyZVCHgSMxhDa4KiC7H9B.jpg",
+        "rating": 3.3,
+        "overview": "Now a shattered mind lurking in cyberspace, Jobe plots a return by hijacking a global VR network and rebuilding himself as something far beyond human. As reality starts to glitch, a small group races to stop a digital god who no longer needs a body.",
+        "release_date": "1996-01-12"
+    },
+    {
+        "movieId": 68,
+        "title": "French Twist (Gazon maudit) (1995)",
+        "genres": "Comedy|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/xlLnHizshGBwMiNrnop2kg2nYzE.jpg",
+        "rating": 6.1,
+        "overview": "After learning of her husband's infidelities, a housewife invites an itinerant lesbian to move in with them. None of their lives will ever be the same again.",
+        "release_date": "1995-01-18"
+    },
+    {
+        "movieId": 69,
+        "title": "Friday (1995)",
+        "genres": "Comedy",
+        "poster": "https://image.tmdb.org/t/p/w500/3Ya1RurP2NqaYoiok4DmfO41rCC.jpg",
+        "rating": 7.1,
+        "overview": "Craig and Smokey are two guys in Los Angeles hanging out on their porch on a Friday afternoon, smoking and drinking, looking for something to do.",
+        "release_date": "1995-04-26"
+    },
+    {
+        "movieId": 70,
+        "title": "From Dusk Till Dawn (1996)",
+        "genres": "Action|Comedy|Horror|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/sV3kIAmvJ9tPz4Lq5fuf9LLMxte.jpg",
+        "rating": 7.0,
+        "overview": "After kidnapping a father and his two kids, the Gecko brothers head south to a seedy Mexican bar to hide out in safety, unaware of its notorious clientele.",
+        "release_date": "1996-01-19"
+    },
+    {
+        "movieId": 71,
+        "title": "Fair Game (1995)",
+        "genres": "Action",
+        "poster": "https://image.tmdb.org/t/p/w500/qcxsWOzBaF7MZNNThtRQWQ9Wrdk.jpg",
+        "rating": 5.2,
+        "overview": "Max Kirkpatrick is a cop who protects Kate McQuean, a civil law attorney, from a renegade KGB team out to terminate her",
+        "release_date": "1995-11-03"
+    },
+    {
+        "movieId": 72,
+        "title": "Kicking and Screaming (1995)",
+        "genres": "Comedy|Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/ynAtSpTou7snNOq32djzILw9VCA.jpg",
+        "rating": 6.2,
+        "overview": "After college graduation, Grover's girlfriend Jane tells him she's moving to Prague to study writing. Grover declines to accompany her, deciding instead to move in with several friends, all of whom can't quite work up the inertia to escape their university's pull. Nobody wants to make any big decisions that would radically alter his life, yet none of them wants to end up like Chet, the professional student who tends bar and is in his tenth year of university studies.",
+        "release_date": "1995-10-06"
+    },
+    {
+        "movieId": 73,
+        "title": "Mis\u00e9rables, Les (1995)",
+        "genres": "Drama|War",
+        "poster": "https://image.tmdb.org/t/p/w500/toQ6BJCiKVSnklpsma2GnJ6KKah.jpg",
+        "rating": 6.7,
+        "overview": "In WWII France, poor and illiterate Henri Fortin is introduced to Victor Hugo's classic novel Les Mis\u00e9rables and begins to see parallels between the book and his own life.",
+        "release_date": "1995-03-22"
+    },
+    {
+        "movieId": 74,
+        "title": "Bed of Roses (1996)",
+        "genres": "Drama|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/zCXvHCEm8334d0d646ldDkXnKws.jpg",
+        "rating": 5.9,
+        "overview": "The seeds of love are planted when Lisa, a high-powered investment banker, receives flowers from a secret admirer. But when his fairy-tale fantasies clash with her workaholic ways, they soon find out that sometimes, it's harder than it seems for love to conquer all.",
+        "release_date": "1996-01-26"
+    },
+    {
+        "movieId": 75,
+        "title": "Big Bully (1996)",
+        "genres": "Comedy|Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/dws3JR4Yi325Tz33XnuXEB6XjGr.jpg",
+        "rating": 4.7,
+        "overview": "A writer returns to his hometown where he faces the childhood nemesis whose life he ultimately ruined, only the bully wants to relive their painful past by torturing him once again.",
+        "release_date": "1996-01-26"
+    },
+    {
+        "movieId": 76,
+        "title": "Screamers (1995)",
+        "genres": "Action|Sci-Fi|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/eqgBf791rMZG7ywHfObpXeMpiRf.jpg",
+        "rating": 6.2,
+        "overview": "SIRIUS 6B, Year 2078. On a distant mining planet ravaged by a decade of war, scientists have created the perfect weapon: a blade-wielding, self-replicating race of killing devices known as Screamers designed for one purpose only -- to hunt down and destroy all enemy life forms.",
+        "release_date": "1995-09-08"
+    },
+    {
+        "movieId": 77,
+        "title": "Nico Icon (1995)",
+        "genres": "Documentary",
+        "poster": "https://image.tmdb.org/t/p/w500/w3oiJZTB1UP3lj0uSVLdsYfsBbC.jpg",
+        "rating": 7.9,
+        "overview": "A look into the many lives of Christa P\u00e4ffgen, otherwise known as Nico; from cutie German m\u00e4dchen to the first of the supermodels, to glamorous diva of the Velvet Underground, to cult item, junkie and hag. Many faces for the same woman, whom, you realize, just couldn't bring herself to care enough to live.",
+        "release_date": "1995-09-08"
+    },
+    {
+        "movieId": 78,
+        "title": "Crossing Guard, The (1995)",
+        "genres": "Action|Crime|Drama|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/kogaCIIylHmWQo2gJrrdq8Br8b8.jpg",
+        "rating": 6.0,
+        "overview": "Unable to move on from the loss of his daughter, Freddy, now a shell of the person he was before, swears to kill the man responsible for her death.",
+        "release_date": "1995-01-26"
+    },
+    {
+        "movieId": 79,
+        "title": "Juror, The (1996)",
+        "genres": "Drama|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/31mRYhJvaknQx8PQnR2UV7YCkLT.jpg",
+        "rating": 5.7,
+        "overview": "Struggling single mother Annie Laird impulsively agrees to serve on a jury, hoping for a little excitement in her humdrum life. But she gets far more than she bargained for when she's forced to sacrifice the truth to save her son from the mob's seductive, psychotic enforcer.",
+        "release_date": "1996-02-02"
+    },
+    {
+        "movieId": 80,
+        "title": "White Balloon, The (Badkonake sefid) (1995)",
+        "genres": "Children|Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/bamJR4MwtQDMdWkjVAPojfwOjY4.jpg",
+        "rating": 7.5,
+        "overview": "Several people try to take advantage of a little girl's innocence to hustle money her mom gave to her to buy a goldfish with.",
+        "release_date": "1995-01-02"
+    },
+    {
+        "movieId": 81,
+        "title": "Things to Do in Denver When You're Dead (1995)",
+        "genres": "Crime|Drama|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/3LxYzYybOVpnw0juCSlNL5cj8NK.jpg",
+        "rating": 6.5,
+        "overview": "Five different criminals face imminent death after botching a job quite badly.",
+        "release_date": "1995-12-01"
+    },
+    {
+        "movieId": 82,
+        "title": "Antonia's Line (Antonia) (1995)",
+        "genres": "Comedy|Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/nUCVi6bBIL7LGC61nYaCqikAhIA.jpg",
+        "rating": 6.9,
+        "overview": "After World War II, Antonia and her daughter, Danielle, go back to their Dutch hometown, where Antonia's late mother has bestowed a small farm upon her. There, Antonia settles down and joins a tightly-knit but unusual community. Those around her include quirky friend Crooked Finger, would-be suitor Bas and, eventually for Antonia, a granddaughter and great-granddaughter who help create a strong family of empowered women.",
+        "release_date": "1995-09-21"
+    },
+    {
+        "movieId": 83,
+        "title": "Once Upon a Time... When We Were Colored (1995)",
+        "genres": "Drama|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/2qeQStLy1wiqDFa1Dnm02f5UacO.jpg",
+        "rating": 4.2,
+        "overview": "A narrator tells the story of his childhood years in a tightly knit Afro-American community in the deep south under racial segregation.",
+        "release_date": "1996-01-26"
+    },
+    {
+        "movieId": 85,
+        "title": "Angels and Insects (1995)",
+        "genres": "Drama|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/w1i5JdddoLuzSmnKo5ORDoKdMm2.jpg",
+        "rating": 6.2,
+        "overview": "In Victorian England, wealthy patriarch Sir Harald Alabaster invites an impoverished biologist, William Adamson, into his home. There, William tries to continue his work, but is distracted by Alabaster's seductive daughter, Eugenia. William and Eugenia begin a torrid romance, but as the couple become closer, the young scientist begins to realize that dark, disturbing things are happening behind the closed doors of the Alabaster manor.",
+        "release_date": "1995-09-10"
+    },
+    {
+        "movieId": 86,
+        "title": "White Squall (1996)",
+        "genres": "Action|Adventure|Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/5xF4qy44Lvv68glS7eHWH7laTqt.jpg",
+        "rating": 6.3,
+        "overview": "In 1960, a hardy group of prep school students boards an old-fashioned sailing ship. With Capt. Christopher Sheldon at the helm, the oceangoing voyage is intended to teach the boys fortitude and discipline. But the youthful crew are about to get some unexpected instruction in survival when they get caught in the clutches of a white squall storm.",
+        "release_date": "1996-02-02"
+    },
+    {
+        "movieId": 87,
+        "title": "Dunston Checks In (1996)",
+        "genres": "Children|Comedy",
+        "poster": "https://image.tmdb.org/t/p/w500/xR2cWC04kWNr7TBeXNOf4uOqn00.jpg",
+        "rating": 5.4,
+        "overview": "Hotel manager Robert Grant is forced by his boss to postpone his family vacation when a hotel critic checks in. Trouble is, the critic is really a villainous jewel thief with an orangutan assistant named Dunston. When Dunston gets loose and tries to escape a life of crime -- aided by Robert's sons -- havoc, hijinks and lots of laughs abound!",
+        "release_date": "1996-01-12"
+    },
+    {
+        "movieId": 88,
+        "title": "Black Sheep (1996)",
+        "genres": "Comedy",
+        "poster": "https://image.tmdb.org/t/p/w500/bqIW5oE4WeHAvk1nh2Y6rfOLGrF.jpg",
+        "rating": 6.1,
+        "overview": "When dignified Albert Donnelly runs for Governor, his team moves to keep his slow-witted and klutzy younger brother, Mike, out of the eye of the media. To baby-sit Mike, the campaign assigns sarcastic Steve, who gets the experience of a lifetime when he tries to take Mike out of town during the election.",
+        "release_date": "1996-02-02"
+    },
+    {
+        "movieId": 89,
+        "title": "Nick of Time (1995)",
+        "genres": "Action|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/A1FJwUVg84sQSjHVz5jVMXQvifJ.jpg",
+        "rating": 6.2,
+        "overview": "An ordinary man is suddenly forced into a plot to kill a politician in exchange for his kidnapped daughter's freedom.",
+        "release_date": "1995-11-22"
+    },
+    {
+        "movieId": 92,
+        "title": "Mary Reilly (1996)",
+        "genres": "Drama|Horror|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/cW5wTiv5fdtBOd22utmAIZBCMS3.jpg",
+        "rating": 5.8,
+        "overview": "A housemaid falls in love with Dr. Jekyll and his darkly mysterious counterpart, Mr. Hyde.",
+        "release_date": "1996-02-23"
+    },
+    {
+        "movieId": 93,
+        "title": "Vampire in Brooklyn (1995)",
+        "genres": "Comedy|Horror|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/fodPA5x3REtOwColG17CucreZqM.jpg",
+        "rating": 5.1,
+        "overview": "Detective Rita Veder is assigned to a baffling serial murder case. After examining the crime scene \u2014 a corpse-filled ship found adrift at sea \u2014 she meets Maximilian, a smooth-talking Caribbean playboy determined to romance her.",
+        "release_date": "1995-10-26"
+    },
+    {
+        "movieId": 94,
+        "title": "Beautiful Girls (1996)",
+        "genres": "Comedy|Drama|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/sHcx1fBmrtZYvFmUywU0d5cvIFd.jpg",
+        "rating": 6.7,
+        "overview": "During a snowy winter in the small fictional town of Knight's Ridge, Massachusetts, a group of lifelong buddies hang out, drink and struggle to connect with the women who affect their decisions, dreams and desires.",
+        "release_date": "1996-02-09"
+    },
+    {
+        "movieId": 95,
+        "title": "Broken Arrow (1996)",
+        "genres": "Action|Adventure|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/iBPMwYYJFvdCBkXrwV75peo5Lz2.jpg",
+        "rating": 6.1,
+        "overview": "When rogue stealth-fighter pilot Vic Deakins deliberately drops off the radar while on maneuvers, the Air Force ends up with two stolen nuclear warheads -- and Deakins's co-pilot, Riley Hale, is the military's only hope for getting them back. Traversing the deserted canyons of Utah, Hale teams with park ranger Terry Carmichael to put Deakins back in his box.",
+        "release_date": "1996-02-09"
+    },
+    {
+        "movieId": 96,
+        "title": "In the Bleak Midwinter (1995)",
+        "genres": "Comedy|Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/eUrv3E65orbuPnFikjpjso4TVBN.jpg",
+        "rating": 7.1,
+        "overview": "Out of work actor Joe volunteers to help try and save his sister's local church for the community by putting on a Christmas production of Hamlet, somewhat against the advice of his agent Margaretta. As the cast he assembles are still available even at Christmas and are prepared to do it on a 'profit sharing' basis (that is, they may not get paid anything) he cannot expect - and does not get - the cream of the cream. But although they all bring their own problems and foibles along, something bigger starts to emerge in the perhaps aptly named village of Hope.",
+        "release_date": "1995-09-29"
+    },
+    {
+        "movieId": 97,
+        "title": "Hate (Haine, La) (1995)",
+        "genres": "Crime|Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/krPTBIs4hbYei6ens2Dp8p6n1cS.jpg",
+        "rating": 4.6,
+        "overview": "Animated pilot based on the Peter Bagge comic book series.",
+        "release_date": "1995-12-31"
+    },
+    {
+        "movieId": 99,
+        "title": "Heidi Fleiss: Hollywood Madam (1995)",
+        "genres": "Documentary",
+        "poster": "https://image.tmdb.org/t/p/w500/laPSb9I8TuYslOh1OcgaTByWKnw.jpg",
+        "rating": 6.7,
+        "overview": "A documentary crew from the BBC arrives in L.A. intent on interviewing Heidi Fleiss, a year after her arrest for running a brothel but before her trial. Several months elapse before the interview, so the crew searches for anyone who'll talk about the young woman. Two people have a lot to say to the camera: a retired madam named Alex for whom Fleiss once worked and Fleiss's one-time boyfriend, Ivan Nagy, who introduced her to Alex. Alex and Nagy don't like each other, so the crew shuttles between them with \"she said\" and \"he said.\" When they finally interview Fleiss, they spend their time reciting what Alex and Nagy have had to say and asking her reaction.",
+        "release_date": "1995-12-27"
+    },
+    {
+        "movieId": 100,
+        "title": "City Hall (1996)",
+        "genres": "Drama|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/w7EkAl4Oi8Lc6VQKaqRHrOV3CxR.jpg",
+        "rating": 6.0,
+        "overview": "The accidental shooting of a boy in New York City leads to an investigation by the Deputy Mayor, and unexpectedly far-reaching consequences.",
+        "release_date": "1996-02-16"
+    },
+    {
+        "movieId": 101,
+        "title": "Bottle Rocket (1996)",
+        "genres": "Adventure|Comedy|Crime|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/wOPiNYt9V3Cbr9Izeddwj7nU8RT.jpg",
+        "rating": 6.7,
+        "overview": "Upon his release from a mental hospital following a nervous breakdown, the directionless Anthony joins his friend Dignan, who seems far less sane than the former. Dignan has hatched a harebrained scheme for an as-yet-unspecified crime spree that somehow involves his former boss, the (supposedly) legendary Mr. Henry.",
+        "release_date": "1996-02-21"
+    },
+    {
+        "movieId": 102,
+        "title": "Mr. Wrong (1996)",
+        "genres": "Comedy",
+        "poster": "https://image.tmdb.org/t/p/w500/csSkKS6rcGjG8jjpwKZPVCD7Kiq.jpg",
+        "rating": 4.0,
+        "overview": "A single and lonely woman finds the seemingly perfect man to date, but soon regrets it when his deranged and possessive other personality emerges and worst still, she cannot convince anyone else of his Jekyll/Hyde true nature.",
+        "release_date": "1996-02-16"
+    },
+    {
+        "movieId": 103,
+        "title": "Unforgettable (1996)",
+        "genres": "Mystery|Sci-Fi|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/500Ne3EDn3HHpuCQWwGKR74r0cB.jpg",
+        "rating": 5.6,
+        "overview": "Seattle medical examiner David Krane is obsessed with solving his wife's murder. A possible solution presents itself in an experimental \"memory\" serum designed by a neurobiology professor, which has the ability to transfer memories from one person to another, but with potentially fatal consequences.",
+        "release_date": "1996-02-23"
+    },
+    {
+        "movieId": 104,
+        "title": "Happy Gilmore (1996)",
+        "genres": "Comedy",
+        "poster": "https://image.tmdb.org/t/p/w500/4RnCeRzvI1xk5tuNWjpDKzSnJDk.jpg",
+        "rating": 6.7,
+        "overview": "Failed hockey player-turned-golf whiz Happy Gilmore \u2014 whose unconventional approach and antics on the green courts the ire of rival Shooter McGavin \u2014 is determined to win a PGA tournament so he can save his granny's house with the prize money. Meanwhile, an attractive tour publicist tries to soften Happy's image.",
+        "release_date": "1996-02-16"
+    },
+    {
+        "movieId": 105,
+        "title": "Bridges of Madison County, The (1995)",
+        "genres": "Drama|Romance",
+        "poster": "https://image.tmdb.org/t/p/w500/aCBrhOQjhG397GLkEZ49zReQEKX.jpg",
+        "rating": 7.7,
+        "overview": "Photographer Robert Kincaid wanders into the life of housewife Francesca Johnson for four days in the 1960s.",
+        "release_date": "1995-06-02"
+    },
+    {
+        "movieId": 106,
+        "title": "Nobody Loves Me (Keiner liebt mich) (1994)",
+        "genres": "Comedy|Drama",
+        "poster": "https://image.tmdb.org/t/p/w500/yAiAs7XWKPDgy1ukb7DGP1cV1LY.jpg",
+        "rating": 4.3,
+        "overview": "Several lives intersect when a middle-aged woman is left by her husband, and she decides to trek him down with the help of her equally troubled sister.",
+        "release_date": "1994-03-09"
+    },
+    {
+        "movieId": 107,
+        "title": "Muppet Treasure Island (1996)",
+        "genres": "Adventure|Children|Comedy|Musical",
+        "poster": "https://image.tmdb.org/t/p/w500/k4KW2CUkzDKaCy4H4cS02cO8gvV.jpg",
+        "rating": 6.7,
+        "overview": "Young Jim Hawkins and his two best friends embark on a voyage across the high seas in search of buried treasure, but soon find that not everyone on board can be trusted.",
+        "release_date": "1996-02-16"
+    },
+    {
+        "movieId": 108,
+        "title": "Catwalk (1996)",
+        "genres": "Documentary",
+        "poster": "https://image.tmdb.org/t/p/w500/8Db2Tx2RkTUozzilF1SGMitcHLl.jpg",
+        "rating": 7.8,
+        "overview": "A documentary following Christy Turlington and other models during spring fashion week in Milan, Paris and New York.",
+        "release_date": "1995-12-08"
+    },
+    {
+        "movieId": 110,
+        "title": "Braveheart (1995)",
+        "genres": "Action|Drama|War",
+        "poster": "https://image.tmdb.org/t/p/w500/or1gBugydmjToAEq7OZY0owwFk.jpg",
+        "rating": 7.9,
+        "overview": "Enraged at the slaughter of Murron, his new bride and childhood love, Scottish warrior William Wallace slays a platoon of the local English lord's soldiers. This leads the village to revolt and, eventually, the entire country to rise up against English rule.",
+        "release_date": "1995-05-24"
+    },
+    {
+        "movieId": 111,
+        "title": "Taxi Driver (1976)",
+        "genres": "Crime|Drama|Thriller",
+        "poster": "https://image.tmdb.org/t/p/w500/ekstpH614fwDX8DUln1a2Opz0N8.jpg",
+        "rating": 8.1,
+        "overview": "Suffering from insomnia, disturbed loner Travis Bickle takes a job as a New York City cabbie, haunting the streets nightly, growing increasingly detached from reality as he dreams of cleaning up the filthy city.",
+        "release_date": "1976-02-09"
+    },
+    {
+        "movieId": 112,
+        "title": "Rumble in the Bronx (Hont faan kui) (1995)",
+        "genres": "Action|Adventure|Comedy|Crime",
+        "poster": "https://image.tmdb.org/t/p/w500/1nAfchiXHQB3iyhK8fCJJEnNs5A.jpg",
+        "rating": 6.9,
+        "overview": "Keong comes from Hong Kong to visit New York for his uncle's wedding. His uncle runs a market in the Bronx and Keong offers to help out while Uncle is on his honeymoon. During his stay in the Bronx, Keong befriends a neighbor kid and beats up some neighborhood thugs who cause problems at the market. One of those petty thugs in the local gang stumbles into a criminal situation way over his head.",
+        "release_date": "1995-01-21"
+    }
+]

@@ -1,0 +1,123 @@
+.adminUsersPage{
+    min-height:100vh;
+    background:#050816;
+    color:white;
+    padding:30px;
+}
+
+.adminHeader{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.adminHeader h1{
+    font-size:32px;
+    font-weight:700;
+}
+
+.searchBar{
+    width:320px;
+    padding:12px 16px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:#111827;
+    color:white;
+    font-size:14px;
+}
+
+.searchBar::placeholder{
+    color:#9ca3af;
+}
+
+.usersTable{
+    width:100%;
+    border-collapse:collapse;
+    background:#111827;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.usersTable thead{
+    background:#8b5cf6;
+}
+
+.usersTable th{
+    padding:16px;
+    text-align:left;
+    color:white;
+    font-size:15px;
+}
+
+.usersTable td{
+    padding:16px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    color:#e5e7eb;
+}
+
+.usersTable tbody tr:hover{
+    background:rgba(139,92,246,.08);
+}
+
+.roleBtn{
+    background:#3b82f6;
+    color:white;
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-right:10px;
+    font-size:13px;
+    transition:.3s;
+}
+
+.roleBtn:hover{
+    background:#2563eb;
+}
+
+.deleteBtn{
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:13px;
+    transition:.3s;
+}
+
+.deleteBtn:hover{
+    background:#dc2626;
+}
+
+.roleBadgeAdmin{
+    background:#10b981;
+    color:white;
+    padding:6px 10px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.roleBadgeUser{
+    background:#f59e0b;
+    color:white;
+    padding:6px 10px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.usersTableContainer{
+    overflow-x:auto;
+    border-radius:12px;
+}
+
+.noUsers{
+    text-align:center;
+    padding:30px;
+    color:#9ca3af;
+    font-size:18px;
+}

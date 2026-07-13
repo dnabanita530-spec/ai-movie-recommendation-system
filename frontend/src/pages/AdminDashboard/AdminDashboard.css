@@ -1,0 +1,79 @@
+.adminDashboard{
+  display:flex;
+  min-height:100vh;
+  background:#050816;
+  color:white;
+}
+
+.adminSidebar{
+  width:220px;
+  background:#0d1325;
+  padding:20px;
+}
+
+.adminSidebar ul{
+  list-style:none;
+  padding:0;
+}
+
+.adminSidebar li{
+  padding:12px;
+  margin-bottom:10px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.adminSidebar li:hover{
+  background:#8b5cf6;
+}
+
+.adminContent{
+  flex:1;
+  padding:25px;
+}
+
+.statsGrid{
+  display:grid;
+  grid-template-columns:
+  repeat(4,1fr);
+
+  gap:20px;
+}
+
+.statCard{
+  background:#111827;
+  padding:20px;
+  border-radius:15px;
+  text-align:center;
+}
+
+.statCard h2{
+  color:#8b5cf6;
+}
+
+.chartsRow{
+  display:grid;
+  grid-template-columns:
+  2fr 1fr;
+
+  gap:20px;
+
+  margin-top:30px;
+}
+
+.chartCard{
+  background:#111827;
+  padding:20px;
+  border-radius:15px;
+}
+
+.topMovies{
+  background:#111827;
+  padding:20px;
+  border-radius:15px;
+  margin-top:30px;
+}
+
+.topMovies li{
+  margin-bottom:10px;
+}

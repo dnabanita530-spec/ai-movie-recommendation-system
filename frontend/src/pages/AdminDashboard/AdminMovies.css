@@ -1,0 +1,193 @@
+.adminMoviesPage{
+    min-height:100vh;
+    background:#050816;
+    color:white;
+    padding:30px;
+}
+
+.adminHeader{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.adminHeader h1{
+    font-size:32px;
+}
+
+.searchBar{
+    width:350px;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#111827;
+    color:white;
+}
+
+.moviesTable{
+    width:100%;
+    border-collapse:collapse;
+    background:#111827;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.moviesTable thead{
+    background:#8b5cf6;
+}
+
+.moviesTable th{
+    padding:15px;
+    text-align:left;
+    color:white;
+}
+
+.moviesTable td{
+    padding:15px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.moviesTable tbody tr:hover{
+    background:rgba(139,92,246,.12);
+}
+
+.editBtn{
+    background:#3b82f6;
+    color:white;
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-right:10px;
+}
+
+.deleteBtn{
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.editBtn:hover,
+.deleteBtn:hover{
+    opacity:.85;
+}
+.modalOverlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:1000;
+}
+
+.modalBox{
+    width:600px;
+    background:#111827;
+    padding:25px;
+    border-radius:15px;
+}
+
+.modalBox h2{
+    margin-bottom:20px;
+    color:white;
+}
+
+.modalBox input,
+.modalBox textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:8px;
+    background:#1f2937;
+    color:white;
+}
+
+.modalButtons{
+    display:flex;
+    justify-content:flex-end;
+    gap:10px;
+}
+
+.saveBtn{
+    background:#8b5cf6;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.cancelBtn{
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+.headerActions{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.addMovieBtn{
+  background:#10b981;
+  color:white;
+  border:none;
+  padding:12px 20px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+  text-align: center;
+}
+
+.addMovieBtn:hover{
+  background:#059669;
+}
+.adminHeader{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.headerRight{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.addMovieBtn{
+    background:#10b981;
+    color:white;
+    border:none;
+    padding:12px 18px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.addMovieBtn:hover{
+    background:#059669;
+    transform:translateY(-2px);
+}
+
+.searchBar{
+    width:300px;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#111827;
+    color:white;
+}

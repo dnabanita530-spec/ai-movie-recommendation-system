@@ -1,0 +1,96 @@
+.navbar{
+    height:80px;
+    background:#0b1328;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    /* padding:0 270px; */
+    padding-left: 255px;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.navLinks{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.navLinks a{
+    color:#d1d5db;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:500;
+    position:relative;
+    transition:.3s ease;
+    padding:8px 0;
+}
+
+.navLinks a:hover{
+    color:white;
+}
+
+.navLinks a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+
+    width:0;
+    height:2px;
+
+    background:#8b5cf6;
+    transition:.3s ease;
+}
+
+.navLinks a:hover::after{
+    width:100%;
+}
+
+.navRight{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.navRight input{
+    width:320px;
+    height:42px;
+
+    border:1px solid rgba(255,255,255,.1);
+    outline:none;
+   font-size: 15px;
+    border-radius:12px;
+
+    padding:0 15px;
+
+    background:#111827;
+    color:white;
+}
+
+.navRight input::placeholder{
+    color:#9ca3af;
+}
+
+.bell{
+    color:white;
+    font-size:25px;
+    cursor:pointer;
+}
+
+.profile{
+    color:white;
+    font-weight:600;
+    font-size: 20px;
+}
+
+
+.navLinks .active{
+    color:white;
+}
+
+.navLinks .active::after{
+    width:100%;
+}

@@ -1,0 +1,153 @@
+.loginPage{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(
+    135deg,
+    #070816,
+    #130028,
+    #1f0054
+    );
+
+    padding:20px;
+}
+
+.loginCard{
+
+    width:500px;
+
+    background:rgba(15,15,35,.9);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    padding:50px;
+}
+
+.logoSection{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.logoSection h1{
+    color:white;
+}
+
+.loginCard h2{
+    text-align:center;
+    color:white;
+    margin-bottom:10px;
+}
+
+.loginCard p{
+    color:#bdbdbd;
+    text-align:center;
+    margin-bottom:30px;
+    line-height:1.6;
+}
+
+.loginCard form{
+    display:flex;
+    flex-direction:column;
+}
+
+.loginCard input{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-bottom:18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#1b1f34;
+
+    color:white;
+
+    font-size:15px;
+}
+
+.loginOptions{
+
+    display:flex;
+    justify-content:space-between;
+
+    margin-bottom:25px;
+
+    color:white;
+}
+
+.loginOptions span{
+    color:#a855f7;
+    cursor:pointer;
+}
+
+.loginCard button{
+
+    width:100%;
+
+    border:none;
+
+    padding:16px;
+
+    border-radius:12px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #6d28d9,
+    #9333ea
+    );
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+}
+
+.divider{
+
+    margin:25px 0;
+
+    text-align:center;
+
+    position:relative;
+}
+
+.divider span{
+    color:#bdbdbd;
+}
+
+.googleBtn{
+
+    background:#171717 !important;
+
+    border:1px solid #2d2d2d !important;
+}
+
+.signupText{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:white;
+}
+
+.signupText a{
+
+    color:#a855f7;
+
+    margin-left:8px;
+}

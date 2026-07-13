@@ -1,0 +1,257 @@
+.emotionPage{
+    background:#0f172a;
+    min-height:100vh;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+.emotionCard{
+    margin:20px auto;
+    width:260px;
+    background:#1e293b;
+    padding:20px;
+    border-radius:15px;
+}
+
+.movieGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+
+    gap:25px;
+
+    margin-top:40px;
+
+}
+
+.movieCard{
+
+    background:#1e293b;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+    padding-bottom:15px;
+
+}
+
+.movieCard:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.moviePoster{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+}
+
+.movieCard h3{
+
+    padding:10px;
+
+}
+
+.movieCard p{
+
+    color:#cbd5e1;
+
+    padding:0 10px;
+
+}
+.cameraFlash{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:white;
+
+opacity:.9;
+
+z-index:999;
+
+animation:flash .2s;
+
+}
+
+@keyframes flash{
+
+from{
+
+opacity:.9;
+
+}
+
+to{
+
+opacity:0;
+
+}
+
+}
+
+.countdown{
+
+font-size:90px;
+
+font-weight:bold;
+
+color:#FFD700;
+
+margin-bottom:20px;
+
+}
+
+.capturedImage{
+
+width:650px;
+
+height:500px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+}
+
+.againBtn{
+
+margin-top:30px;
+
+padding:15px 40px;
+
+font-size:20px;
+
+background:#2563eb;
+
+color:white;
+
+border:none;
+
+border-radius:12px;
+
+cursor:pointer;
+
+}
+
+.againBtn:hover{
+
+background:#1d4ed8;
+
+}
+.cameraContainer{
+
+    position:relative;
+
+    width:650px;
+
+    margin:auto;
+
+}
+
+.countdownOverlay{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    font-size:120px;
+
+    font-weight:bold;
+
+    color:white;
+
+    text-shadow:0 0 20px black;
+
+    z-index:20;
+
+}
+
+.capturedImage{
+
+    width:650px;
+
+    height:500px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+}
+
+.cameraFlash{
+
+    position:fixed;
+
+    inset:0;
+
+    background:white;
+
+    z-index:9999;
+
+    animation:flash .25s ease;
+
+}
+
+@keyframes flash{
+
+    from{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        opacity:0;
+
+    }
+
+}
+
+.againBtn{
+
+    margin-top:30px;
+
+    padding:15px 40px;
+
+    font-size:20px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+}
+
+.againBtn:hover{
+
+    background:#1d4ed8;
+
+}

@@ -1,0 +1,68 @@
+.reviewsPage{
+    min-height:100vh;
+    background:#050b1e;
+    color:white;
+    padding:40px;
+}
+
+.reviewsPage h1{
+    margin-bottom:30px;
+}
+
+.reviewsGrid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fill,minmax(280px,1fr));
+    gap:25px;
+}
+
+.reviewCard{
+    background:#111827;
+    border-radius:16px;
+    padding:20px;
+    transition:.3s;
+}
+
+.reviewCard:hover{
+    transform:translateY(-5px);
+}
+
+.reviewCard h3{
+    margin-bottom:10px;
+}
+
+.reviewCard p{
+    color:#9ca3af;
+    margin-bottom:15px;
+}
+
+.ratingBadge{
+    display:inline-block;
+    background:#7c3aed;
+    padding:8px 15px;
+    border-radius:30px;
+    margin-bottom:15px;
+    font-weight:600;
+}
+
+.reviewCard button{
+    width:100%;
+    border:none;
+    padding:12px;
+    border-radius:10px;
+    background:#ef4444;
+    color:white;
+    cursor:pointer;
+}
+
+.reviewCard button:hover{
+    background:#dc2626;
+}
+
+.emptyReviews{
+    background:#111827;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    color:#9ca3af;
+}

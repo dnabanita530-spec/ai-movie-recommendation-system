@@ -1,0 +1,30 @@
+.performancePage{
+  min-height:100vh;
+  background:#050816;
+  color:white;
+  padding:30px;
+}
+
+.performancePage h1{
+  margin-bottom:30px;
+}
+
+.performanceGrid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.performanceCard{
+  background:#111827;
+  padding:30px;
+  border-radius:16px;
+  text-align:center;
+}
+
+.performanceCard h2{
+  color:#8b5cf6;
+  font-size:32px;
+  margin-bottom:10px;
+}

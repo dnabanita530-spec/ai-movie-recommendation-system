@@ -1,0 +1,17 @@
+.historyPage{
+  padding:30px;
+  min-height:100vh;
+  background:#050816;
+  color:white;
+}
+
+.historyGrid{
+  margin-top:30px;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fill,minmax(220px,1fr));
+
+  gap:25px;
+}

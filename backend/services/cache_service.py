@@ -1,0 +1,23 @@
+import json
+import os
+
+CACHE_FILE = "cache/movies_cache.json"
+
+def load_cache():
+
+    if os.path.exists(CACHE_FILE):
+
+        with open(CACHE_FILE, "r", encoding="utf-8") as f:
+
+            return json.load(f)
+
+    return []
+
+
+def save_cache(data):
+
+    os.makedirs("cache", exist_ok=True)
+
+    with open(CACHE_FILE, "w", encoding="utf-8") as f:
+
+        json.dump(data, f, indent=4)
