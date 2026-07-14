@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
+import { getFavorites } from "../../services/favoriteService";
+import { getHistory } from "../../services/historyService";
+import { getRatings } from "../../services/ratingService";
+import { getReviews } from "../../services/reviewService";
 import { getPoster } from "../../services/tmdbService";
 import "./UserDashboard.css";
 
@@ -15,34 +19,90 @@ const [posters, setPosters] =
 
   const [history, setHistory] =
     useState([]);
+    const [reviews, setReviews] =
+    useState([]);
 
+  // useEffect(() => {
+
+  //   setFavorites(
+  //     JSON.parse(
+  //       localStorage.getItem(
+  //         "favorites"
+  //       )
+  //     ) || []
+  //   );
+
+  //   setRatings(
+  //     JSON.parse(
+  //       localStorage.getItem(
+  //         "userRatings"
+  //       )
+  //     ) || []
+  //   );
+
+  //   setHistory(
+  //     JSON.parse(
+  //       localStorage.getItem(
+  //         "watchHistory"
+  //       )
+  //     ) || []
+  //   );
+
+  // }, []);
   useEffect(() => {
 
-    setFavorites(
-      JSON.parse(
-        localStorage.getItem(
-          "favorites"
-        )
-      ) || []
-    );
+    loadDashboard();
 
-    setRatings(
-      JSON.parse(
-        localStorage.getItem(
-          "userRatings"
-        )
-      ) || []
-    );
+}, []);
 
-    setHistory(
-      JSON.parse(
-        localStorage.getItem(
-          "watchHistory"
-        )
-      ) || []
-    );
+const loadDashboard = async () => {
 
-  }, []);
+    try{
+
+        const username =
+            localStorage.getItem("username");
+
+        if(!username) return;
+
+        const [
+
+            historyData,
+
+            favoriteData,
+
+            ratingData,
+
+            reviewData
+
+        ] = await Promise.all([
+
+            getHistory(username),
+
+            getFavorites(username),
+
+            getRatings(username),
+
+            getReviews(username)
+
+        ]);
+
+        setHistory(historyData);
+
+        setFavorites(favoriteData);
+
+        setRatings(ratingData);
+
+        setReviews(reviewData);
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+    }
+
+};
 
   const likedMovies =
     ratings.filter(
@@ -212,7 +272,7 @@ useEffect(() => {
           <div className="statCard">
 
             <h3>
-              {ratings.length}
+              {reviews.length}
             </h3>
 
             <p>

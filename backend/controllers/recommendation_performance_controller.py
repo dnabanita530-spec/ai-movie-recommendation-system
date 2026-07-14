@@ -17,88 +17,92 @@ router = APIRouter(
 def get_performance():
 
     db = SessionLocal()
+    try:
 
-    logs = db.query(
-        RecommendationLog
-    ).all()
+        logs = db.query(
+            RecommendationLog
+        ).all()
 
-    total_recommendations = len(logs)
+        total_recommendations = len(logs)
 
-    user_count = {}
+        user_count = {}
 
-    movie_count = {}
+        movie_count = {}
 
-    hybrid_count = 0
+        hybrid_count = 0
 
-    for log in logs:
+        for log in logs:
 
         # Most Active User
-        user_count[log.username] = (
-            user_count.get(
-                log.username,
-                0
-            ) + 1
-        )
-
-        # Recommendation Type Count
-        if (
-            log.recommendation_type
-            == "Hybrid"
-        ):
-            hybrid_count += 1
-
-        # Most Recommended Movie
-        movies = (
-            log.movies.split(",")
-        )
-
-        for movie in movies:
-
-            movie = movie.strip()
-
-            movie_count[movie] = (
-                movie_count.get(
-                    movie,
+            user_count[log.username] = (
+                user_count.get(
+                    log.username,
                     0
                 ) + 1
             )
 
-    most_active_user = (
+        # Recommendation Type Count
+            if (
+                log.recommendation_type
+                == "Hybrid"
+            ):
+                hybrid_count += 1
 
-        max(
-            user_count,
-            key=user_count.get
+        # Most Recommended Movie
+            movies = (
+                log.movies.split(",")
+            )
+
+            for movie in movies:
+
+                movie = movie.strip()
+
+                movie_count[movie] = (
+                    movie_count.get(
+                        movie,
+                        0
+                    ) + 1
+                )
+
+        most_active_user = (
+
+            max(
+                user_count,
+                key=user_count.get
+            )
+
+            if user_count
+
+            else "N/A"
         )
 
-        if user_count
+        most_recommended_movie = (
 
-        else "N/A"
-    )
+            max(
+                movie_count,
+                key=movie_count.get
+            )
 
-    most_recommended_movie = (
+            if movie_count
 
-        max(
-            movie_count,
-            key=movie_count.get
+            else "N/A"
         )
 
-        if movie_count
+        return {
 
-        else "N/A"
-    )
+            "totalRecommendations":
+            total_recommendations,
 
-    return {
+            "hybridRecommendations":
+            hybrid_count,
 
-        "totalRecommendations":
-        total_recommendations,
+            "mostActiveUser":
+            most_active_user,
 
-        "hybridRecommendations":
-        hybrid_count,
+            "mostRecommendedMovie":
+            most_recommended_movie
 
-        "mostActiveUser":
-        most_active_user,
+        }
+    finally:
 
-        "mostRecommendedMovie":
-        most_recommended_movie
-
-    }
+        db.close()

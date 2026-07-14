@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 
 import MovieCard from "../../components/MovieCard/MovieCard";
-
+import {
+  removeFavorite
+} from "../../services/favoriteService";
 import "./MyList.css";
 
 function MyList() {
@@ -21,20 +23,33 @@ function MyList() {
     setFavorites(data);
 
   }, []);
-  const removeMovie = (id) => {
+//   const removeMovie = (id) => {
 
-  const updated =
-    favorites.filter(
-      movie =>
-        movie.movieId !== id
+//   const updated =
+//     favorites.filter(
+//       movie =>
+//         movie.movieId !== id
+//     );
+
+//   localStorage.setItem(
+//     "favorites",
+//     JSON.stringify(updated)
+//   );
+
+//   setFavorites(updated);
+
+// };
+const removeMovie = async (id) => {
+
+    const username =
+        localStorage.getItem("username");
+
+    await removeFavorite(
+        username,
+        id
     );
 
-  localStorage.setItem(
-    "favorites",
-    JSON.stringify(updated)
-  );
-
-  setFavorites(updated);
+    loadFavorites();
 
 };
 

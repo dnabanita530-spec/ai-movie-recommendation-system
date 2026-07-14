@@ -35,3 +35,4 @@ def get_trending_movies():
     ].to_dict(
         orient="records"
     )
+    

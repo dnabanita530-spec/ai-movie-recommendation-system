@@ -15,22 +15,22 @@ import AdminUsers from "../pages/AdminDashboard/AdminUsers";
 import RecommendationPerformance from "../pages/AdminDashboard/RecommendationPerformance";
 import BrowseMovies from "../pages/BrowseMovies/BrowseMovies";
 import Dashboard from "../pages/Dashboard/Dashboard";
+import Genres from "../pages/Genres/Genres";
 import History from "../pages/History/History";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import MovieDetails from "../pages/MovieDetails/MovieDetails";
 import MyList from "../pages/MyList/MyList";
 import Recommendations from "../pages/Recommendations/Recommendations";
-import Reviews from "../pages/Reviews.jsx";
+import Reviews from "../pages/Reviews/Reviews.jsx";
 import Signup from "../pages/Signup/Signup";
 import SmartRecommendation from "../pages/SmartRecommendation/SmartRecommendation";
 import UserDashboard from "../pages/UserDashboard/UserDashboard";
-
 // import Emotion from "../pages/Emotion/Emotion";
 import AIChat from "../pages/AIChat/AIChat";
 import EmotionRecommendation from "../pages/EmotionRecommendation/EmotionRecommendation";
 import Profile from "../pages/Profile/Profile";
-
+import Ratings from "../pages/Ratings/Ratings";
 
 function AppRoutes() {
   return (
@@ -80,6 +80,10 @@ function AppRoutes() {
 <Route
   path="/history"
   element={<History />}
+/>
+<Route
+  path="/ratings"
+  element={<Ratings />}
 />
 <Route
   path="/dashboard"
@@ -154,6 +158,10 @@ function AppRoutes() {
 <Route
     path="/ai-chat"
     element={<AIChat />}
+/>
+<Route
+    path="/genres"
+    element={<Genres />}
 />
 
       </Routes>

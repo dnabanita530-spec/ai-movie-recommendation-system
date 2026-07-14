@@ -25,8 +25,11 @@ from controllers.emotion_controller import (
 from controllers.chatbot_controller import (
     router as chatbot_router
 )
+from controllers.favorite_controller import router as favorite_router
 
-
+from controllers.history_controller import router as history_router
+from controllers.review_controller import router as review_router
+from controllers.rating_controller import router as rating_router
 # ======================================
 # Create FastAPI App
 # ======================================
@@ -89,6 +92,10 @@ app.include_router(
     emotion_router
 )
 app.include_router(chatbot_router)
+app.include_router(favorite_router)
+app.include_router(history_router)
+app.include_router(review_router)
+app.include_router(rating_router)
 # ======================================
 # Home API
 # ======================================

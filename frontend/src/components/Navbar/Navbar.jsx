@@ -1,48 +1,108 @@
-import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
+
 function Navbar() {
-const username =
-  localStorage.getItem("username");
+
+  const username =
+    localStorage.getItem("username");
+
+  const navigate = useNavigate();
+
+  const [open, setOpen] = useState(false);
+
+  const logout = () => {
+
+    localStorage.clear();
+
+    navigate("/login");
+
+  };
+
   return (
 
     <div className="navbar">
+       <div className="navLeft">
 
-      <div className="navLinks">
+        <div
+            className="logo"
+            onClick={() => navigate("/home")}
+        >
+            🎬 MovieRecs
+        </div>
 
-        <NavLink to="/home">Home</NavLink>
+    </div>
 
-        {/* <NavLink to="/movies">Movies</NavLink> */}
+      <div className="searchBox">
 
-        <NavLink to="/genres">Genres</NavLink>
-           <NavLink to="/browse">
-          Browse Movies
-        </NavLink>
-
-        <NavLink to="/recommendations">Recommendations</NavLink>
-        <NavLink to="/user-dashboard">
-  👤User Dashboard
-</NavLink>
-
-        {/* <NavLink to="/favourites">My List</NavLink> */}
+        <input
+          type="text"
+          placeholder="🔍 Search movies..."
+        />
 
       </div>
 
       <div className="navRight">
 
-        <input
-          type="text"
-          placeholder="Search movies, actors..."
-        />
-
         <span className="bell">
+
           🔔
+
         </span>
 
-        <div className="profile">
+        <div
+          className="profile"
+          onClick={() => setOpen(!open)}
+        >
 
-          <h3>
-  Welcome {username} !
-</h3>
+          👤 Welcome, {username} ▼
+
+          {
+
+            open && (
+
+              <div className="dropdown">
+
+                <div
+                  onClick={() =>
+                    navigate("/profile")
+                  }
+                >
+
+                  👤 Profile
+
+                </div>
+
+                <div
+                  onClick={() =>
+                    navigate("/user-dashboard")
+                  }
+                >
+
+                  📊 Dashboard
+
+                </div>
+
+                <div>
+
+                  ⚙ Settings
+
+                </div>
+
+                <div
+                  className="logout"
+                  onClick={logout}
+                >
+
+                  🚪 Logout
+
+                </div>
+
+              </div>
+
+            )
+
+          }
 
         </div>
 
@@ -51,6 +111,7 @@ const username =
     </div>
 
   );
+
 }
 
 export default Navbar;

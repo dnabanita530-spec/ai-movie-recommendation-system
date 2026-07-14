@@ -3,12 +3,23 @@
 
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-
-import { getMovieById } from "../../services/movieService";
-import { getRecommendations } from "../../services/recommendationService";
-
 import MovieCard from "../../components/MovieCard/MovieCard";
-
+import {
+  addFavorite,
+  getFavorites,
+  removeFavorite
+} from "../../services/favoriteService";
+import {
+  addHistory
+} from "../../services/historyService";
+import { getMovieById } from "../../services/movieService";
+import {
+  addRating
+} from "../../services/ratingService";
+import { getRecommendations } from "../../services/recommendationService";
+import {
+  addReview
+} from "../../services/reviewService";
 import "./MovieDetails.css";
 
 function MovieDetails() {
@@ -23,146 +34,316 @@ function MovieDetails() {
   const [isFavorite, setIsFavorite] = useState(false);
   const [watching, setWatching] = useState(false);
   const [ratingSaved,setRatingSaved]=useState(false);
-
+const [review, setReview] = useState("");
   useEffect(() => {
     loadMovie();
   }, [id]);
 
+// const loadMovie = async () => {
+
+//   const data = await getMovieById(id);
+
+//   setMovie(data);
+
+//   // -------------------------
+//   // Favorite Status
+//   // -------------------------
+
+//   // const favorites =
+//   //   JSON.parse(localStorage.getItem("favorites")) || [];
+
+//   // setIsFavorite(
+//   //   favorites.some(item => item.movieId === data.movieId)
+//   // );
+// const username = localStorage.getItem("username");
+
+// const favorites = await getFavorites(username);
+
+// setIsFavorite(
+
+//     favorites.some(
+
+//         item => item.movieId === data.movieId
+
+//     )
+
+// );
+//   // -------------------------
+//   // Previously Saved Rating
+//   // -------------------------
+
+//   // const ratings =
+//   //   JSON.parse(localStorage.getItem("ratings")) || [];
+
+//   // const saved = ratings.find(
+//   //   r => r.movieId === data.movieId
+//   // );
+
+//   // if (saved) {
+
+//   //   setUserRating(saved.rating);
+
+//   //   setRatingSaved(true);
+
+//   // } else {
+
+//   //   setUserRating("");
+
+//   //   setRatingSaved(false);
+
+//   // }
+
+//   // -------------------------
+//   // Similar Movies
+//   // -------------------------
+
+//   const recs = await getRecommendations(id);
+
+//   setRecommendations(recs);
+
+// };
+
 const loadMovie = async () => {
 
-  const data = await getMovieById(id);
+  try {
 
-  setMovie(data);
+    const data = await getMovieById(id);
 
-  // -------------------------
-  // Favorite Status
-  // -------------------------
+    setMovie(data);
 
-  const favorites =
-    JSON.parse(localStorage.getItem("favorites")) || [];
+    const username = localStorage.getItem("username");
 
-  setIsFavorite(
-    favorites.some(item => item.movieId === data.movieId)
-  );
+    // Save watch history
+    await addHistory({
 
-  // -------------------------
-  // Previously Saved Rating
-  // -------------------------
+      username,
 
-  const ratings =
-    JSON.parse(localStorage.getItem("ratings")) || [];
+      movieId: data.movieId,
 
-  const saved = ratings.find(
-    r => r.movieId === data.movieId
-  );
+      title: data.title,
 
-  if (saved) {
+      poster: data.poster
 
-    setUserRating(saved.rating);
+    });
+
+    // Check favorite status
+    const favorites = await getFavorites(username);
+
+    setIsFavorite(
+
+      favorites.some(
+        item => item.movieId === data.movieId
+      )
+
+    );
+
+    // Load recommendations
+    const recs = await getRecommendations(id);
+
+    setRecommendations(recs);
+
+  }
+
+  catch (err) {
+
+    console.error(err);
+
+  }
+
+};
+
+// const addToFavorites = () => {
+
+//   const favorites =
+//     JSON.parse(localStorage.getItem("favorites")) || [];
+
+//   if (isFavorite) {
+
+//     const updated = favorites.filter(
+//       item => item.movieId !== movie.movieId
+//     );
+
+//     localStorage.setItem(
+//       "favorites",
+//       JSON.stringify(updated)
+//     );
+
+//     setIsFavorite(false);
+
+//     alert("Removed from Favorites");
+
+//   } else {
+
+//     favorites.push(movie);
+
+//     localStorage.setItem(
+//       "favorites",
+//       JSON.stringify(favorites)
+//     );
+
+//     setIsFavorite(true);
+
+//     alert("Added to Favorites ❤️");
+
+//   }
+
+// };
+const addToFavorites = async () => {
+
+    const username =
+        localStorage.getItem("username");
+
+    try{
+
+        if(isFavorite){
+
+            await removeFavorite(
+                username,
+                movie.movieId
+            );
+
+            setIsFavorite(false);
+
+            alert("Removed from Favorites");
+
+        }
+
+        else{
+
+            await addFavorite({
+
+                username,
+
+                movieId: movie.movieId,
+
+                title: movie.title,
+
+                poster: movie.poster
+
+            });
+
+            setIsFavorite(true);
+
+            alert("Added to Favorites ❤️");
+
+        }
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+        alert("Something went wrong.");
+
+    }
+
+};
+
+// const saveRating=()=>{
+
+// if(!userRating){
+
+// alert("Please select a rating");
+
+// return;
+
+// }
+
+// const ratings=
+// JSON.parse(localStorage.getItem("ratings"))||[];
+
+// const existing=
+// ratings.find(r=>r.movieId===movie.movieId);
+
+// if(existing){
+
+// existing.rating=Number(userRating);
+
+// }else{
+
+// ratings.push({
+
+// movieId:movie.movieId,
+
+// title:movie.title,
+
+// rating:Number(userRating)
+
+// });
+
+// }
+
+// localStorage.setItem(
+
+// "ratings",
+
+// JSON.stringify(ratings)
+
+// );
+
+// setRatingSaved(true);
+
+// };
+const saveRating = async () => {
+
+    if (!userRating) {
+
+        alert("Please select a rating");
+
+        return;
+
+    }
+
+    await addRating({
+
+        username:
+            localStorage.getItem("username"),
+
+        movieId:
+            movie.movieId,
+
+        title:
+            movie.title,
+
+        rating:
+            Number(userRating)
+
+    });
 
     setRatingSaved(true);
 
-  } else {
-
-    setUserRating("");
-
-    setRatingSaved(false);
-
-  }
-
-  // -------------------------
-  // Similar Movies
-  // -------------------------
-
-  const recs = await getRecommendations(id);
-
-  setRecommendations(recs);
+    alert("Rating Saved");
 
 };
+const saveReview = async () => {
 
-const addToFavorites = () => {
+    if(!review){
 
-  const favorites =
-    JSON.parse(localStorage.getItem("favorites")) || [];
+        alert("Write a review");
 
-  if (isFavorite) {
+        return;
 
-    const updated = favorites.filter(
-      item => item.movieId !== movie.movieId
-    );
+    }
 
-    localStorage.setItem(
-      "favorites",
-      JSON.stringify(updated)
-    );
+    await addReview({
 
-    setIsFavorite(false);
+        username:
+            localStorage.getItem("username"),
 
-    alert("Removed from Favorites");
+        movieId:
+            movie.movieId,
 
-  } else {
+        title:
+            movie.title,
 
-    favorites.push(movie);
+        review
 
-    localStorage.setItem(
-      "favorites",
-      JSON.stringify(favorites)
-    );
+    });
 
-    setIsFavorite(true);
-
-    alert("Added to Favorites ❤️");
-
-  }
+    alert("Review Saved");
 
 };
-
-const saveRating=()=>{
-
-if(!userRating){
-
-alert("Please select a rating");
-
-return;
-
-}
-
-const ratings=
-JSON.parse(localStorage.getItem("ratings"))||[];
-
-const existing=
-ratings.find(r=>r.movieId===movie.movieId);
-
-if(existing){
-
-existing.rating=Number(userRating);
-
-}else{
-
-ratings.push({
-
-movieId:movie.movieId,
-
-title:movie.title,
-
-rating:Number(userRating)
-
-});
-
-}
-
-localStorage.setItem(
-
-"ratings",
-
-JSON.stringify(ratings)
-
-);
-
-setRatingSaved(true);
-
-};
-
  const watchTrailer = async () => {
 
   setWatching(true);
@@ -231,6 +412,7 @@ setRatingSaved(true);
       </span>
 
     </div>
+   
 
     <div className="genres">
 
@@ -478,6 +660,25 @@ onClick={saveRating}
 </button>
 
   </div>
+   <div className="reviewSection">
+
+    <h3>✍️ Write Your Review</h3>
+
+    <textarea
+        className="reviewInput"
+        value={review}
+        onChange={(e)=>setReview(e.target.value)}
+        placeholder="Share your thoughts about this movie..."
+    />
+
+    <button
+        className="reviewButton"
+        onClick={saveReview}
+    >
+        📝 Submit Review
+    </button>
+
+</div>
 
 </div>
 

@@ -11,29 +11,31 @@ router = APIRouter(
 def get_users():
 
     db = SessionLocal()
+    try:
+        users = db.query(User).all()
 
-    users = db.query(User).all()
+        result = []
 
-    result = []
+        for user in users:
 
-    for user in users:
+            result.append({
 
-        result.append({
+                "id": user.id,
 
-            "id": user.id,
+                "name": user.name,
 
-            "name": user.name,
+                "email": user.email,
 
-            "email": user.email,
+                "role": user.role,
 
-            "role": user.role,
+                "created_at":
+                str(user.created_at)
 
-            "created_at":
-            str(user.created_at)
+            })
 
-        })
-
-    return result
+        return result
+    finally:
+        db.close()
   
 #  Change Role 
 @router.put("/{user_id}/role")
@@ -42,33 +44,35 @@ def update_role(
 ):
 
     db = SessionLocal()
+    try:
+        user = db.query(User).filter(
+            User.id == user_id
+        ).first()
 
-    user = db.query(User).filter(
-        User.id == user_id
-    ).first()
+        if not user:
 
-    if not user:
+            return {
+                "message":
+                "User not found"
+            }
+
+        user.role = (
+
+            "ADMIN"
+
+            if user.role == "USER"
+
+            else "USER"
+
+        )
+
+        db.commit()
 
         return {
-            "message":
-            "User not found"
+            "success": True
         }
-
-    user.role = (
-
-        "ADMIN"
-
-        if user.role == "USER"
-
-        else "USER"
-
-    )
-
-    db.commit()
-
-    return {
-        "success": True
-    }
+    finally:
+        db.close()
     
     # DElete User
 @router.delete("/{user_id}")
@@ -77,22 +81,25 @@ def delete_user(
 ):
 
     db = SessionLocal()
+    try:
 
-    user = db.query(User).filter(
-        User.id == user_id
-    ).first()
+        user = db.query(User).filter(
+            User.id == user_id
+        ).first()
 
-    if not user:
+        if not user:
+
+            return {
+                "message":
+                "User not found"
+            }
+
+        db.delete(user)
+
+        db.commit()
 
         return {
-            "message":
-            "User not found"
+            "success": True
         }
-
-    db.delete(user)
-
-    db.commit()
-
-    return {
-        "success": True
-    }
+    finally:
+        db.close()

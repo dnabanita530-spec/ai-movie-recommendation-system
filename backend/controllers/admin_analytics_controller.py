@@ -1,6 +1,115 @@
+# from fastapi import APIRouter
+# import pandas as pd
+# from sqlalchemy.orm import Session
+
+# from config.database import SessionLocal
+# from models.user_model import User
+
+# router = APIRouter(
+#     prefix="/admin/analytics",
+#     tags=["Admin Analytics"]
+# )
+
+# movies_df = pd.read_csv(
+#     "data/enriched_movies.csv"
+# )
+
+# ratings_df = pd.read_csv(
+#     "data/ratings.csv"
+# )
+# @router.get("/")
+# def get_analytics():
+
+#     db = SessionLocal()
+    
+#     total_movies = len(
+#     movies_df
+# )
+
+#     total_users = len(
+#     ratings_df["userId"]
+#     .unique()
+# )
+
+#     total_ratings = len(
+#     ratings_df
+# )
+
+#     active_users = (
+#     db.query(User)
+#     .count()
+# )
+
+#     top_movies = (
+#         ratings_df
+#         .groupby("movieId")
+#         ["rating"]
+#         .mean()
+#         .sort_values(
+#             ascending=False
+#         )
+#         .head(5)
+#     )
+
+#     movie_names = []
+
+#     for movie_id in top_movies.index:
+
+#         movie = movies_df[
+#             movies_df["movieId"]
+#             == movie_id
+#         ]
+
+#         if not movie.empty:
+
+#             movie_names.append(
+#                 movie.iloc[0]["title"]
+#             )
+
+#     genre_count = {}
+
+#     for genres in movies_df[
+#         "genres"
+#     ]:
+
+#         for genre in genres.split("|"):
+
+#             genre_count[
+#                 genre
+#             ] = (
+#                 genre_count.get(
+#                     genre,
+#                     0
+#                 ) + 1
+#             )
+
+#     return {
+
+#         "totalMovies":
+#         total_movies,
+
+#         "totalUsers":
+#         total_users,
+
+#         "totalRatings":
+#         total_ratings,
+
+#         "activeUsers":
+#         active_users,
+
+#         "topMovies":
+#         movie_names,
+
+#         "genreDistribution":
+#         genre_count
+
+#     }
+
+
+
+
 from fastapi import APIRouter
 import pandas as pd
-from sqlalchemy.orm import Session
 
 from config.database import SessionLocal
 from models.user_model import User
@@ -17,90 +126,81 @@ movies_df = pd.read_csv(
 ratings_df = pd.read_csv(
     "data/ratings.csv"
 )
+
+
 @router.get("/")
 def get_analytics():
 
     db = SessionLocal()
 
-    total_movies = len(
-    movies_df
-)
+    try:
 
-    total_users = len(
-    ratings_df["userId"]
-    .unique()
-)
+        total_movies = len(movies_df)
 
-    total_ratings = len(
-    ratings_df
-)
-
-    active_users = (
-    db.query(User)
-    .count()
-)
-
-    top_movies = (
-        ratings_df
-        .groupby("movieId")
-        ["rating"]
-        .mean()
-        .sort_values(
-            ascending=False
+        total_users = len(
+            ratings_df["userId"].unique()
         )
-        .head(5)
-    )
 
-    movie_names = []
+        total_ratings = len(
+            ratings_df
+        )
 
-    for movie_id in top_movies.index:
+        active_users = (
+            db.query(User)
+            .count()
+        )
 
-        movie = movies_df[
-            movies_df["movieId"]
-            == movie_id
-        ]
+        top_movies = (
+            ratings_df
+            .groupby("movieId")["rating"]
+            .mean()
+            .sort_values(ascending=False)
+            .head(5)
+        )
 
-        if not movie.empty:
+        movie_names = []
 
-            movie_names.append(
-                movie.iloc[0]["title"]
-            )
+        for movie_id in top_movies.index:
 
-    genre_count = {}
+            movie = movies_df[
+                movies_df["movieId"] == movie_id
+            ]
 
-    for genres in movies_df[
-        "genres"
-    ]:
+            if not movie.empty:
 
-        for genre in genres.split("|"):
+                movie_names.append(
+                    movie.iloc[0]["title"]
+                )
 
-            genre_count[
-                genre
-            ] = (
-                genre_count.get(
-                    genre,
-                    0
-                ) + 1
-            )
+        genre_count = {}
 
-    return {
+        for genres in movies_df["genres"]:
 
-        "totalMovies":
-        total_movies,
+            for genre in genres.split("|"):
 
-        "totalUsers":
-        total_users,
+                genre_count[genre] = (
+                    genre_count.get(
+                        genre,
+                        0
+                    ) + 1
+                )
 
-        "totalRatings":
-        total_ratings,
+        return {
 
-        "activeUsers":
-        active_users,
+            "totalMovies": total_movies,
 
-        "topMovies":
-        movie_names,
+            "totalUsers": total_users,
 
-        "genreDistribution":
-        genre_count
+            "totalRatings": total_ratings,
 
-    }
+            "activeUsers": active_users,
+
+            "topMovies": movie_names,
+
+            "genreDistribution": genre_count
+
+        }
+
+    finally:
+
+        db.close()

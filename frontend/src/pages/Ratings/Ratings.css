@@ -1,0 +1,34 @@
+.ratingsPage{
+    min-height:100vh;
+    background:#050b1e;
+    color:white;
+    padding:30px;
+}
+
+.ratingsGrid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+    gap:20px;
+    margin-top:25px;
+}
+
+.ratingCard{
+    background:#111827;
+    padding:20px;
+    border-radius:16px;
+    text-align:center;
+}
+
+.ratingCard h2{
+    color:#facc15;
+    margin:15px 0;
+}
+
+.ratingCard button{
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}

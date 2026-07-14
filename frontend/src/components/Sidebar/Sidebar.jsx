@@ -24,12 +24,22 @@ function Sidebar() {
       <nav>
 
         <Link to="/home">🏠 Home</Link>
-
-        <Link to="/explore">🔍 Explore</Link>
+        <Link to="/genres">
+   🎭 Genres
+</Link>
+ 
+ <Link to="/browse">
+          Browse Movies
+        </Link>
+        <Link to="/recommendations">Recommendations</Link>
+<Link to="/smart-recommendation">
+  🤖 Smart Recommender
+</Link>
+        {/* <Link to="/explore">🔍 Explore</Link>
 
         <Link to="/movies">🎬 Movies</Link>
 
-        <Link to="/tvshows">📺 TV Shows</Link>
+        <Link to="/tvshows">📺 TV Shows</Link> */}
 
         {/* <Link to="/favorites">❤️ My List</Link> */}
            <Link to="/my-list">
@@ -57,9 +67,9 @@ function Sidebar() {
      {/* <Link to="/dashboard">
   Dashboard
 </Link> */}
-<Link to="/smart-recommendation">
-  🤖 Smart Recommender
-</Link>
+
+
+
 {/* <Link to="/user-dashboard">
   👤 User Dashboard
 </Link> */}

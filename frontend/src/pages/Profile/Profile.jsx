@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { getFavorites } from "../../services/favoriteService";
+import { getHistory } from "../../services/historyService";
+import { getRatings } from "../../services/ratingService";
 import "./Profile.css";
-
 function Profile() {
 
   const [profile, setProfile] = useState(null);
@@ -53,30 +55,34 @@ function Profile() {
 
       setProfile(data);
 
-      setFavorites(
-        JSON.parse(
-          localStorage.getItem(
-            "favorites"
-          )
-        ) || []
-      );
+     const favs = await getFavorites(username);
 
-      setHistory(
-        JSON.parse(
-          localStorage.getItem(
-            "watchHistory"
-          )
-        ) || []
-      );
+setFavorites(favs);
 
-      setRatings(
-        JSON.parse(
-          localStorage.getItem(
-            "userRatings"
-          )
-        ) || []
-      );
+      // setHistory(
+      //   JSON.parse(
+      //     localStorage.getItem(
+      //       "watchHistory"
+      //     )
+      //   ) || []
+      // );
 
+      // setRatings(
+      //   JSON.parse(
+      //     localStorage.getItem(
+      //       "userRatings"
+      //     )
+      //   ) || []
+      // );
+const historyData =
+  await getHistory(username);
+
+setHistory(historyData);
+
+const ratingsData =
+  await getRatings(username);
+
+setRatings(ratingsData);
     } catch (error) {
 
       console.error(

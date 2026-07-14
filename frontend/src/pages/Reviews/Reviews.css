@@ -66,3 +66,45 @@
     text-align:center;
     color:#9ca3af;
 }
+
+.reviewText{
+
+    color:#d1d5db;
+
+    margin:18px 0;
+
+    line-height:1.7;
+
+    min-height:80px;
+
+}
+
+.deleteBtn{
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#ef4444;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.deleteBtn:hover{
+
+    background:#dc2626;
+
+}

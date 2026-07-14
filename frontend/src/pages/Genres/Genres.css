@@ -1,0 +1,73 @@
+.genresPage{
+
+    padding:40px;
+
+    color:white;
+
+    min-height:100vh;
+
+    background:#0b1020;
+}
+
+.genresPage h1{
+
+    font-size:42px;
+
+    margin-bottom:10px;
+}
+
+.genresPage p{
+
+    color:#9ca3af;
+
+    margin-bottom:40px;
+
+    font-size:18px;
+}
+
+.genreGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+
+    gap:25px;
+}
+
+.genreCard{
+
+    background:#151d31;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    border:1px solid transparent;
+}
+
+.genreCard:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#8b5cf6;
+
+    box-shadow:0 12px 35px rgba(124,58,237,.35);
+}
+
+.genreCard h2{
+
+    color:white;
+
+    margin-bottom:15px;
+}
+
+.genreCard span{
+
+    color:#a78bfa;
+
+    font-size:15px;
+}

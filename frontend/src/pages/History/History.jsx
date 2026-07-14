@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
-import MovieCard from "../../components/MovieCard/MovieCard";
-
+import {
+  getHistory
+} from "../../services/historyService";
 import "./History.css";
 
 function History() {
@@ -10,18 +11,45 @@ function History() {
     setHistory] =
       useState([]);
 
+  // useEffect(() => {
+
+  //   const movies =
+  //     JSON.parse(
+  //       localStorage.getItem(
+  //         "watchHistory"
+  //       )
+  //     ) || [];
+
+  //   setHistory(movies);
+
+  // }, []);
   useEffect(() => {
 
-    const movies =
-      JSON.parse(
-        localStorage.getItem(
-          "watchHistory"
-        )
-      ) || [];
+    loadHistory();
 
-    setHistory(movies);
+}, []);
 
-  }, []);
+const loadHistory = async () => {
+
+  try {
+
+    const username =
+      localStorage.getItem("username");
+
+    const data =
+      await getHistory(username);
+
+    setHistory(data);
+
+  }
+
+  catch (error) {
+
+    console.error(error);
+
+  }
+
+};
 
   return (
 
@@ -31,16 +59,34 @@ function History() {
         Recently Viewed Movies
       </h1>
 
-      <div className="historyGrid">
+       <div className="movieGrid">
 
-        {history.map(movie => (
+        {history
+          .slice(0, 6)
+          .map(movie => (
 
-          <MovieCard
-            key={movie.movieId}
-            movie={movie}
-          />
+            <div
+              key={movie.movieId}
+              className="movieCard"
+            >
 
-        ))}
+              <img
+                src={
+                  movie.poster ||
+                  "https://dummyimage.com/300x450/111827/ffffff&text=Movie"
+                }
+                alt={movie.title}
+              />
+
+              <h4>
+
+                {movie.title}
+
+              </h4>
+
+            </div>
+
+          ))}
 
       </div>
 

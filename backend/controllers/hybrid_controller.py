@@ -322,17 +322,20 @@ def hybrid_recommendation(
     )
 
     db = SessionLocal()
+    try:
 
-    movie_titles = [
-        movie["title"]
-        for movie in recommended_movies
-    ]
+        movie_titles = [
+            movie["title"]
+            for movie in recommended_movies
+        ]
 
-    RecommendationLogService.save_log(
-    db=db,
-    username=username,
-    rec_type="Hybrid",
-    movies=movie_titles
-)
+        RecommendationLogService.save_log(
+        db=db,
+        username=username,
+        rec_type="Hybrid",
+        movies=movie_titles
+    )
 
-    return recommended_movies
+        return recommended_movies
+    finally:
+        db.close()
