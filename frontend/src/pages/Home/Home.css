@@ -306,3 +306,50 @@
     transform:scale(1.05);
 
 }
+
+.aiChatBtn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    width:180px;
+    height:60px;
+
+    background:linear-gradient(
+        135deg,
+        #8b5cf6 0%,
+        #4f8ef7 100%
+    );
+
+    color:#fff;
+    text-decoration:none;
+
+    font-size:20px;
+    font-weight:700;
+
+    border:none;
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:all .3s ease;
+
+    box-shadow:
+    0 8px 20px rgba(92,92,255,.35);
+}
+
+.aiChatBtn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 12px 30px rgba(92,92,255,.55);
+
+    background:linear-gradient(
+        135deg,
+        #9b6dff,
+        #5b9cff
+    );
+
+}

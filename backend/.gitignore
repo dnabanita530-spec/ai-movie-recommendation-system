@@ -8,6 +8,8 @@ venv/
 
 # ML model files (if they can be regenerated)
 *.pkl
+# ML Models
+backend/models/*.pkl
 
 # Cache
 backend/cache/

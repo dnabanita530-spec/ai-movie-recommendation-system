@@ -29,9 +29,9 @@ function Sidebar() {
 </Link>
  
  <Link to="/browse">
-          Browse Movies
+          🎬 Browse Movies
         </Link>
-        <Link to="/recommendations">Recommendations</Link>
+        <Link to="/recommendations"> ⭐ Recommendations</Link>
 <Link to="/smart-recommendation">
   🤖 Smart Recommender
 </Link>

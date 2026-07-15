@@ -81,8 +81,8 @@ const handleRecommend = async () => {
 
       setStats({
         searchedMovie: movieName,
-        totalRecommendations: 1,
-        algorithm: "TMDB Search"
+        totalRecommendations: 1
+        
       });
 
     } else {
@@ -94,9 +94,8 @@ const handleRecommend = async () => {
       setStats({
         searchedMovie: movieName,
         totalRecommendations:
-          data.length,
-        algorithm:
-          "Hybrid Recommendation"
+          data.length
+       
       });
 
     }
@@ -118,7 +117,7 @@ const handleRecommend = async () => {
     <div className="smartPage">
 
       <h1>
-        Hybrid Movie Recommendation
+       Smart Movie Recommendation
       </h1>
 
       <div className="searchSection">
@@ -159,10 +158,6 @@ const handleRecommend = async () => {
       {stats.totalRecommendations}
     </p>
 
-    <p>
-      Algorithm:
-      {stats.algorithm}
-    </p>
 
   </div>
 
