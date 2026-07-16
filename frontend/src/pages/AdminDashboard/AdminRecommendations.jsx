@@ -4,91 +4,386 @@ import {
 } from "react";
 
 import {
+  Doughnut
+} from "react-chartjs-2";
+
+import {
+  ArcElement,
+  Chart as ChartJS,
+  Legend,
+  Tooltip
+} from "chart.js";
+
+import {
   getRecommendations
 } from "../../services/adminRecommendationService";
 
 import "./AdminRecommendations.css";
 
+ChartJS.register(
+  ArcElement,
+  Tooltip,
+  Legend
+);
+
 function AdminRecommendations() {
 
-  const [data, setData] =
-    useState([]);
+  const [stats, setStats] = useState(null);
 
   useEffect(() => {
 
+    // eslint-disable-next-line react-hooks/immutability
     loadRecommendations();
 
   }, []);
 
-  const loadRecommendations =
-    async () => {
+  const loadRecommendations = async () => {
 
-      const res =
-        await getRecommendations();
+    const data = await getRecommendations();
 
-      setData(res);
+    console.log(data);
 
-    };
+    setStats(data);
+
+  };
+
+  if (!stats) {
+
+    return (
+      <div className="recommendationPage">
+        <h2>Loading...</h2>
+      </div>
+    );
+
+  }
+
+  const chartData = {
+
+    labels: [
+
+      "Hybrid",
+
+      "Content"
+
+    ],
+
+    datasets: [
+
+      {
+
+        data: [
+
+          stats.hybridCount,
+
+          stats.contentCount
+
+        ],
+
+        backgroundColor: [
+
+          "#8b5cf6",
+
+          "#06b6d4"
+
+        ]
+
+      }
+
+    ]
+
+  };
 
   return (
 
     <div className="recommendationPage">
 
       <h1>
+
         🎯 Recommendation Monitoring
+
       </h1>
 
-      <table
-        className="recommendationTable"
-      >
+      {/* Cards */}
 
-        <thead>
+      <div className="cardsGrid">
 
-          <tr>
+        <div className="card">
 
-            <th>User</th>
+          <h2>
 
-            <th>Type</th>
+            {stats.totalRecommendations}
 
-            <th>Recommended Movies</th>
+          </h2>
 
-          </tr>
+          <p>
 
-        </thead>
+            🤖 Total Recommendations
 
-        <tbody>
+          </p>
 
-          {data.map(
-            (item,index) => (
+        </div>
 
-              <tr key={index}>
+        <div className="card">
 
-                <td>
-                  {item.user}
-                </td>
+          <h2>
 
-                <td>
-                  {item.type}
-                </td>
+            {stats.totalUsers}
 
-                <td>
+          </h2>
 
-                  {
-                    item.movies.join(
-                      ", "
-                    )
-                  }
+          <p>
 
-                </td>
+            👥 Users
+
+          </p>
+
+        </div>
+
+        <div className="card">
+
+          <h2>
+
+            {stats.hybridCount}
+
+          </h2>
+
+          <p>
+
+            ⭐ Hybrid
+
+          </p>
+
+        </div>
+
+        <div className="card">
+
+          <h2>
+
+            {stats.contentCount}
+
+          </h2>
+
+          <p>
+
+            🎬 Content
+
+          </p>
+
+        </div>
+
+      </div>
+
+      {/* Charts */}
+
+      <div className="chartSection">
+
+        <div className="chartCard">
+
+          <h3>
+
+            Recommendation Types
+
+          </h3>
+
+         <div className="doughnutWrapper">
+    <Doughnut
+        data={chartData}
+        options={{
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: "60%",
+            plugins: {
+                legend: {
+                    position: "top"
+                }
+            }
+        }}
+    />
+</div>
+
+        </div>
+
+        <div className="topMovieCard">
+
+          <h3>
+
+            Top Recommended Movies
+
+          </h3>
+
+          <table>
+
+            <thead>
+
+              <tr>
+
+                <th>
+
+                  Rank
+
+                </th>
+
+                <th>
+
+                  Movie
+
+                </th>
+
+                <th>
+
+                  Count
+
+                </th>
 
               </tr>
 
-            )
-          )}
+            </thead>
 
-        </tbody>
+            <tbody>
 
-      </table>
+              {stats.topMovies.map(
+
+                (movie, index) => (
+
+                  <tr key={index}>
+
+                    <td>
+
+                      {index + 1}
+
+                    </td>
+
+                    <td>
+
+                      {movie.title}
+
+                    </td>
+
+                    <td>
+
+                      {movie.count}
+
+                    </td>
+
+                  </tr>
+
+                )
+
+              )}
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+      {/* Recommendation Log */}
+
+      <div className="logCard">
+
+        <h2>
+
+          Recommendation Log
+
+        </h2>
+
+        <table className="recommendationTable">
+
+          <thead>
+
+            <tr>
+
+              <th>User</th>
+
+              <th>Type</th>
+
+              <th>Movies</th>
+
+              <th>Date</th>
+
+              <th>Status</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            {stats.logs.map(
+
+              (log, index) => (
+
+                <tr key={index}>
+
+                  <td>
+
+                    {log.user}
+
+                  </td>
+
+                  <td>
+
+                    {log.type}
+
+                  </td>
+
+                  <td>
+
+                    {log.movies.join(", ")}
+
+                  </td>
+
+                  <td>
+
+                    {log.date}
+
+                  </td>
+
+                  <td>
+
+                    ✅ {log.status}
+
+                  </td>
+
+                </tr>
+
+              )
+
+            )}
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+      {/* Activities */}
+
+      <div className="activityCard">
+
+        <h2>
+
+          Recent Activities
+
+        </h2>
+
+        {stats.activities.map(
+
+          (activity, index) => (
+
+            <p key={index}>
+
+              ✔ {activity}
+
+            </p>
+
+          )
+
+        )}
+
+      </div>
 
     </div>
 

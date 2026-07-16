@@ -15,6 +15,7 @@ function Profile() {
 
   useEffect(() => {
 
+    // eslint-disable-next-line react-hooks/immutability
     loadProfile();
 
   }, []);
@@ -59,21 +60,7 @@ function Profile() {
 
 setFavorites(favs);
 
-      // setHistory(
-      //   JSON.parse(
-      //     localStorage.getItem(
-      //       "watchHistory"
-      //     )
-      //   ) || []
-      // );
-
-      // setRatings(
-      //   JSON.parse(
-      //     localStorage.getItem(
-      //       "userRatings"
-      //     )
-      //   ) || []
-      // );
+      
 const historyData =
   await getHistory(username);
 

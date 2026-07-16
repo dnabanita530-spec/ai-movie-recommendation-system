@@ -1,14 +1,3 @@
-// import axios from "axios";
-
-// const API = "http://127.0.0.1:8000";
-
-// export const getMovieDetails = async (id) => {
-//   const res = await axios.get(
-//     `${API}/tmdb/${id}`
-//   );
-
-//   return res.data;
-// };
 
 
 
@@ -22,34 +11,7 @@ export const getPoster =
 
     try {
 
-      // const cleanTitle = title
-
-      //   // Remove year
-      //   .replace(/\(\d{4}\)/g, "")
-
-      //   // Matrix, The -> The Matrix
-      //   .replace(/^(.*), The$/, "The $1")
-
-      //   // Bug's Life, A -> A Bug's Life
-      //   .replace(/^(.*), A$/, "A $1")
-
-      //   .trim();
-
-      // console.log(
-      //   "Searching TMDB:",
-      //   cleanTitle
-      // );
-
-      // const res =
-      //   await axios.get(
-      //     "https://api.themoviedb.org/3/search/movie",
-      //     {
-      //       params: {
-      //         api_key: API_KEY,
-      //         query: cleanTitle
-      //       }
-      //     }
-      //   );
+      
       const match =
   title.match(/\((\d{4})\)/);
 

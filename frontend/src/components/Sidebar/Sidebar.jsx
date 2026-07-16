@@ -35,51 +35,15 @@ function Sidebar() {
 <Link to="/smart-recommendation">
   🤖 Smart Recommender
 </Link>
-        {/* <Link to="/explore">🔍 Explore</Link>
-
-        <Link to="/movies">🎬 Movies</Link>
-
-        <Link to="/tvshows">📺 TV Shows</Link> */}
-
-        {/* <Link to="/favorites">❤️ My List</Link> */}
+        
            <Link to="/my-list">
   ❤️ Liked Movies
 </Link>
 
         <Link to="/history">🕒 History</Link>
 
-        {/* <Link to="/liked">👍 Liked</Link> */}
         
 
-        {/* <Link to="/settings">⚙️ Settings</Link> */}
-        {/* <Link to="/admin-movies">
-  🎬 Movies
-</Link> */}
-{/* <Link to="/admin-users">
-  👥 Users
-</Link> */}
-{/* <Link to="/admin-reviews">
-  ⭐ Reviews
-</Link>
-<Link to="/admin-analytics">
-  📈 Analytics
-</Link> */}
-     {/* <Link to="/dashboard">
-  Dashboard
-</Link> */}
-
-
-
-{/* <Link to="/user-dashboard">
-  👤 User Dashboard
-</Link> */}
-<li>
-  {/* <Link
-    to="/recommendation-performance"
-  >
-    📊 Performance
-  </Link> */}
-</li>
 {/* <Link to="/admin-dashboard">
   Admin Dashboard
 </Link> */}

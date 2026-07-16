@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {
-  getRatings,
-  removeRating
+    getRatings,
+    removeRating
 } from "../../services/ratingService";
 import "./Ratings.css";
 
@@ -11,6 +11,7 @@ function Ratings() {
 
     useEffect(() => {
 
+        // eslint-disable-next-line react-hooks/immutability
         loadRatings();
 
     }, []);

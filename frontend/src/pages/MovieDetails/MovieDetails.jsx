@@ -36,72 +36,11 @@ function MovieDetails() {
   const [ratingSaved,setRatingSaved]=useState(false);
 const [review, setReview] = useState("");
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/immutability
     loadMovie();
   }, [id]);
 
-// const loadMovie = async () => {
 
-//   const data = await getMovieById(id);
-
-//   setMovie(data);
-
-//   // -------------------------
-//   // Favorite Status
-//   // -------------------------
-
-//   // const favorites =
-//   //   JSON.parse(localStorage.getItem("favorites")) || [];
-
-//   // setIsFavorite(
-//   //   favorites.some(item => item.movieId === data.movieId)
-//   // );
-// const username = localStorage.getItem("username");
-
-// const favorites = await getFavorites(username);
-
-// setIsFavorite(
-
-//     favorites.some(
-
-//         item => item.movieId === data.movieId
-
-//     )
-
-// );
-//   // -------------------------
-//   // Previously Saved Rating
-//   // -------------------------
-
-//   // const ratings =
-//   //   JSON.parse(localStorage.getItem("ratings")) || [];
-
-//   // const saved = ratings.find(
-//   //   r => r.movieId === data.movieId
-//   // );
-
-//   // if (saved) {
-
-//   //   setUserRating(saved.rating);
-
-//   //   setRatingSaved(true);
-
-//   // } else {
-
-//   //   setUserRating("");
-
-//   //   setRatingSaved(false);
-
-//   // }
-
-//   // -------------------------
-//   // Similar Movies
-//   // -------------------------
-
-//   const recs = await getRecommendations(id);
-
-//   setRecommendations(recs);
-
-// };
 
 const loadMovie = async () => {
 
@@ -152,42 +91,7 @@ const loadMovie = async () => {
 
 };
 
-// const addToFavorites = () => {
 
-//   const favorites =
-//     JSON.parse(localStorage.getItem("favorites")) || [];
-
-//   if (isFavorite) {
-
-//     const updated = favorites.filter(
-//       item => item.movieId !== movie.movieId
-//     );
-
-//     localStorage.setItem(
-//       "favorites",
-//       JSON.stringify(updated)
-//     );
-
-//     setIsFavorite(false);
-
-//     alert("Removed from Favorites");
-
-//   } else {
-
-//     favorites.push(movie);
-
-//     localStorage.setItem(
-//       "favorites",
-//       JSON.stringify(favorites)
-//     );
-
-//     setIsFavorite(true);
-
-//     alert("Added to Favorites ❤️");
-
-//   }
-
-// };
 const addToFavorites = async () => {
 
     const username =
@@ -240,51 +144,7 @@ const addToFavorites = async () => {
 
 };
 
-// const saveRating=()=>{
 
-// if(!userRating){
-
-// alert("Please select a rating");
-
-// return;
-
-// }
-
-// const ratings=
-// JSON.parse(localStorage.getItem("ratings"))||[];
-
-// const existing=
-// ratings.find(r=>r.movieId===movie.movieId);
-
-// if(existing){
-
-// existing.rating=Number(userRating);
-
-// }else{
-
-// ratings.push({
-
-// movieId:movie.movieId,
-
-// title:movie.title,
-
-// rating:Number(userRating)
-
-// });
-
-// }
-
-// localStorage.setItem(
-
-// "ratings",
-
-// JSON.stringify(ratings)
-
-// );
-
-// setRatingSaved(true);
-
-// };
 const saveRating = async () => {
 
     if (!userRating) {

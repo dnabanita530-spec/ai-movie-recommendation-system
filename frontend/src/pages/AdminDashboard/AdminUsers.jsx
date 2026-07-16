@@ -23,6 +23,7 @@ function AdminUsers() {
 
   useEffect(() => {
 
+    // eslint-disable-next-line react-hooks/immutability
     loadUsers();
 
   }, []);
@@ -143,9 +144,7 @@ function AdminUsers() {
                   {user.email}
                 </td>
 
-                {/* <td>
-                  {user.role}
-                </td> */}
+                
                 <td>
   <span
     className={
@@ -162,36 +161,27 @@ function AdminUsers() {
                   {user.created_at}
                 </td>
 
-                <td>
+               <td>
+  <div className="actionButtons">
 
-                  <button
-                    className="roleBtn"
-                    onClick={() =>
-                      handleRole(
-                        user.id
-                      )
-                    }
-                  >
+    <button
+      className="roleBtn"
+      onClick={() => handleRole(user.id)}
+      title="Change Role"
+    >
+      🔄
+    </button>
 
-                    Change Role
+    <button
+      className="deleteBtn"
+      onClick={() => handleDelete(user.id)}
+      title="Delete User"
+    >
+      🗑️
+    </button>
 
-                  </button>
-
-                  <button
-                    className="deleteBtn"
-                    onClick={() =>
-                      handleDelete(
-                        user.id
-                      )
-                    }
-                  >
-
-                    Delete
-
-                  </button>
-
-                </td>
-
+  </div>
+</td>
               </tr>
 
             )

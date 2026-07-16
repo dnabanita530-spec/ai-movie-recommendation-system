@@ -31,6 +31,7 @@ const navigate = useNavigate();
 const moviesPerPage = 20;
   useEffect(() => {
 
+    // eslint-disable-next-line react-hooks/immutability
     loadMovies();
 
   }, []);
@@ -39,6 +40,7 @@ const moviesPerPage = 20;
   const selectedGenre =
     searchParams.get("genre") || "";
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   setGenre(selectedGenre);
 
 }, [searchParams]);
@@ -157,50 +159,7 @@ const genres = [
     )
   )
 ].sort();
-// const languageMap = {
-//   en: "English",
-//   fr: "French",
-//   it: "Italian",
-//   hu: "Hungarian"
-// };
-// const languageMap = {
-//   en: "English",
-//   hi: "Hindi",
-//   bn: "Bengali",
-//   ta: "Tamil",
-//   te: "Telugu",
-//   ml: "Malayalam",
-//   kn: "Kannada",
-//   mr: "Marathi",
-//   gu: "Gujarati",
-//   pa: "Punjabi",
-//   ur: "Urdu",
-//   es: "Spanish",
-//   fr: "French",
-//   de: "German",
-//   it: "Italian",
-//   ja: "Japanese",
-//   ko: "Korean",
-//   zh: "Chinese",
-//   ru: "Russian",
-//   pt: "Portuguese",
-//   ar: "Arabic",
-//   tr: "Turkish",
-//   nl: "Dutch",
-//   sv: "Swedish",
-//   pl: "Polish",
-//   th: "Thai",
-//   id: "Indonesian",
-//   vi: "Vietnamese"
-// };
 
-// const languages = [
-//   ...new Set(
-//     movies
-//       .filter(movie => movie.language)
-//       .map(movie => movie.language)
-//   )
-// ];
 useEffect(() => {
 
   // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -311,66 +270,10 @@ Number(e.target.value)
 
   </div>
 
-  {/* Language */}
-
-  {/* <div className="filterGroup">
-
-    <h3>Language</h3>
-
-    <select
-      value={language}
-      onChange={(e) =>
-        setLanguage(e.target.value)
-      }
-    >
-      <option value="">
-        All Languages
-      </option>
-
-      {languages.map(lang => (
-
-        <option
-          key={lang}
-          value={lang}
-        >
-          {languageMap[lang] || lang}
-        </option>
-
-      ))}
-
-    </select>
-
-  </div> */}
+ 
 
 </div>
-      {/* <div className="filterGroup">
-
-  <h3>Language</h3>
-
-  <select
-    value={language}
-    onChange={(e) => setLanguage(e.target.value)}
-  >
-    <option value="">
-      All Languages
-    </option>
-
-    <option value="English">
-      English
-    </option>
-
-    <option value="Hindi">
-      Hindi
-    </option>
-
-    <option value="Bengali">
-      Bengali
-    </option>
-
-  </select>
-
-</div> */}
-
+      
 
       <div className="moviesContainer">
 

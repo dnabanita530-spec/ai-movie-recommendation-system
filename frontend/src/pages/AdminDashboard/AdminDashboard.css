@@ -1,79 +1,235 @@
 .adminDashboard{
-  display:flex;
-  min-height:100vh;
-  background:#050816;
-  color:white;
+    display:flex;
+    min-height:100vh;
+    background:#050816;
+    color:white;
 }
 
 .adminSidebar{
-  width:220px;
-  background:#0d1325;
-  padding:20px;
+    width:240px;
+    background:#0d1325;
+    padding:25px;
+}
+
+.adminSidebar h2{
+    margin-bottom:30px;
 }
 
 .adminSidebar ul{
-  list-style:none;
-  padding:0;
+    list-style:none;
+    padding:0;
 }
 
 .adminSidebar li{
-  padding:12px;
-  margin-bottom:10px;
-  border-radius:10px;
-  cursor:pointer;
+    margin-bottom:12px;
 }
 
-.adminSidebar li:hover{
-  background:#8b5cf6;
+.adminSidebar a,
+.adminSidebar button{
+    width:100%;
+    display:block;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:transparent;
+    color:white;
+    text-decoration:none;
+    cursor:pointer;
+    text-align:left;
+}
+
+.adminSidebar a:hover,
+.adminSidebar button:hover{
+    background:#8b5cf6;
 }
 
 .adminContent{
-  flex:1;
-  padding:25px;
+    flex:1;
+    padding:30px;
 }
 
 .statsGrid{
-  display:grid;
-  grid-template-columns:
-  repeat(4,1fr);
 
-  gap:20px;
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    margin-bottom:30px;
+
 }
 
 .statCard{
-  background:#111827;
-  padding:20px;
-  border-radius:15px;
-  text-align:center;
+
+    background:#111827;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    text-align:center;
+
 }
 
 .statCard h2{
-  color:#8b5cf6;
+
+    color:#8b5cf6;
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+.statCard p{
+
+    font-size:17px;
+
 }
 
 .chartsRow{
-  display:grid;
-  grid-template-columns:
-  2fr 1fr;
 
-  gap:20px;
+    display:grid;
 
-  margin-top:30px;
+    grid-template-columns:2fr 1fr;
+
+    gap:20px;
+
+}
+
+.leftSection{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.rightSection{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
 }
 
 .chartCard{
-  background:#111827;
-  padding:20px;
-  border-radius:15px;
+
+    background:#111827;
+
+    border-radius:15px;
+
+    padding:20px;
+
+}
+
+.activityCard{
+
+    background:#111827;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    max-height:450px;
+
+    overflow-y:auto;
+
+}
+
+.activityItem{
+
+    padding:10px;
+
+    margin-bottom:10px;
+
+    background:#1f2937;
+
+    border-radius:8px;
+
 }
 
 .topMovies{
-  background:#111827;
-  padding:20px;
-  border-radius:15px;
-  margin-top:30px;
+
+    background:#111827;
+
+    border-radius:15px;
+
+    padding:30px;
+    font-size:20px;
+
 }
 
-.topMovies li{
-  margin-bottom:10px;
+.topMoviesTable{
+
+    width:70%;
+    height:70px;
+
+    border-collapse:collapse;
+
+}
+
+.topMoviesTable th{
+
+    background:#8b5cf6;
+
+    padding:12px;
+
+}
+
+.topMoviesTable td{
+
+    padding:12px;
+
+    border-bottom:1px solid #374151;
+
+}
+
+.topMoviesTable tr:hover{
+
+    background:#1f2937;
+
+}
+
+@media(max-width:1200px){
+
+.statsGrid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.chartsRow{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.statsGrid{
+
+grid-template-columns:1fr;
+
+}
+
+.adminDashboard{
+
+flex-direction:column;
+
+}
+
+.adminSidebar{
+
+width:100%;
+
+}
+
 }

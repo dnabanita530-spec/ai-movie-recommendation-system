@@ -30,6 +30,7 @@ from controllers.favorite_controller import router as favorite_router
 from controllers.history_controller import router as history_router
 from controllers.review_controller import router as review_router
 from controllers.rating_controller import router as rating_router
+from controllers.admin_movie_controller import router as admin_movie_router
 # ======================================
 # Create FastAPI App
 # ======================================
@@ -46,7 +47,9 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "http://127.0.0.1:5173"
+        "http://127.0.0.1:5173",
+        "http://localhost:5174",
+        "http://127.0.0.1:5174",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -96,6 +99,7 @@ app.include_router(favorite_router)
 app.include_router(history_router)
 app.include_router(review_router)
 app.include_router(rating_router)
+app.include_router(admin_movie_router)
 # ======================================
 # Home API
 # ======================================
@@ -105,3 +109,6 @@ def home():
     return {
         "message": "Movie Recommendation Backend Running"
     }
+@app.get("/test")
+def test():
+    return {"status": "working"}

@@ -1,193 +1,342 @@
-.adminMoviesPage{
-    min-height:100vh;
-    background:#050816;
-    color:white;
+
+ .moviesPage{
+
     padding:30px;
+
+    color:white;
+
+    background:#050816;
+
+    min-height:100vh;
+
 }
 
-.adminHeader{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+.moviesPage h1{
+
     margin-bottom:25px;
+
 }
 
-.adminHeader h1{
-    font-size:32px;
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:#111827;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+}
+
+th{
+
+    background:#8b5cf6;
+
+    padding:15px;
+
+    text-align:left;
+
+}
+
+td{
+
+    padding:15px;
+
+    border-bottom:1px solid #374151;
+
+}
+
+tr:hover{
+
+    background:#1f2937;
+
+}
+
+.poster{
+
+    width:70px;
+
+    border-radius:8px;
+
+}
+
+.editBtn{
+
+    background:#3b82f6;
+
+    color:white;
+
+    border:none;
+
+    padding:8px 15px;
+
+    border-radius:8px;
+
+    
+
+    cursor:pointer;
+
+}
+
+.deleteBtn{
+
+    background:#ef4444;
+
+    color:white;
+
+    border:none;
+
+    padding:8px 15px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+.modalOverlay{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.65);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:1000;
+
+}
+
+.modal{
+
+width:420px;
+
+background:#111827;
+
+padding:25px;
+
+border-radius:15px;
+
+color:white;
+
+box-shadow:0 0 30px rgba(0,0,0,.5);
+
+}
+
+.modal h2{
+
+margin-bottom:20px;
+
+text-align:center;
+
+}
+
+.modal label{
+
+display:block;
+
+margin-top:15px;
+
+margin-bottom:8px;
+
+font-weight:600;
+
+}
+
+.modal input{
+
+width:100%;
+
+padding:10px;
+
+border-radius:8px;
+
+border:1px solid #444;
+
+background:#1f2937;
+
+color:white;
+
+font-size:15px;
+
+}
+
+.modalButtons{
+
+display:flex;
+
+justify-content:flex-end;
+
+gap:10px;
+
+margin-top:25px;
+
+}
+
+.saveBtn{
+
+background:#10b981;
+
+color:white;
+
+border:none;
+
+padding:10px 20px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
+
+.cancelBtn{
+
+background:#ef4444;
+
+color:white;
+
+border:none;
+
+padding:10px 20px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
+
+.saveBtn:hover{
+
+background:#059669;
+
+}
+
+.cancelBtn:hover{
+
+background:#dc2626;
+
 }
 
 .searchBar{
-    width:350px;
-    padding:12px;
+
+display:flex;
+
+gap:10px;
+
+margin-bottom:20px;
+
+}
+
+.searchBar input{
+
+flex:1;
+
+padding:12px;
+
+border-radius:10px;
+
+border:none;
+
+font-size:15px;
+
+}
+
+.searchBar button{
+
+background:#8b5cf6;
+
+color:white;
+
+border:none;
+
+padding:12px 20px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
+
+.pagination{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:20px;
+
+margin-top:25px;
+
+}
+
+.pagination button{
+
+padding:10px 20px;
+
+border:none;
+
+border-radius:10px;
+
+background:#8b5cf6;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+.pagination button:disabled{
+
+opacity:.4;
+
+cursor:not-allowed;
+
+}
+.actionButtons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.editBtn,
+.deleteBtn{
+    width:42px;
+    height:42px;
     border:none;
     border-radius:10px;
-    background:#111827;
-    color:white;
-}
-
-.moviesTable{
-    width:100%;
-    border-collapse:collapse;
-    background:#111827;
-    border-radius:12px;
-    overflow:hidden;
-}
-
-.moviesTable thead{
-    background:#8b5cf6;
-}
-
-.moviesTable th{
-    padding:15px;
-    text-align:left;
-    color:white;
-}
-
-.moviesTable td{
-    padding:15px;
-    border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.moviesTable tbody tr:hover{
-    background:rgba(139,92,246,.12);
+    cursor:pointer;
+    font-size:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .editBtn{
     background:#3b82f6;
-    color:white;
-    border:none;
-    padding:8px 14px;
-    border-radius:8px;
-    cursor:pointer;
-    margin-right:10px;
 }
 
 .deleteBtn{
     background:#ef4444;
-    color:white;
-    border:none;
-    padding:8px 14px;
-    border-radius:8px;
-    cursor:pointer;
 }
 
 .editBtn:hover,
 .deleteBtn:hover{
-    opacity:.85;
-}
-.modalOverlay{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.75);
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    z-index:1000;
-}
-
-.modalBox{
-    width:600px;
-    background:#111827;
-    padding:25px;
-    border-radius:15px;
-}
-
-.modalBox h2{
-    margin-bottom:20px;
-    color:white;
-}
-
-.modalBox input,
-.modalBox textarea{
-    width:100%;
-    padding:12px;
-    margin-bottom:15px;
-    border:none;
-    border-radius:8px;
-    background:#1f2937;
-    color:white;
-}
-
-.modalButtons{
-    display:flex;
-    justify-content:flex-end;
-    gap:10px;
-}
-
-.saveBtn{
-    background:#8b5cf6;
-    color:white;
-    border:none;
-    padding:10px 18px;
-    border-radius:8px;
-    cursor:pointer;
-}
-
-.cancelBtn{
-    background:#ef4444;
-    color:white;
-    border:none;
-    padding:10px 18px;
-    border-radius:8px;
-    cursor:pointer;
-}
-.headerActions{
-  display:flex;
-  align-items:center;
-  gap:15px;
-}
-
-.addMovieBtn{
-  background:#10b981;
-  color:white;
-  border:none;
-  padding:12px 20px;
-  border-radius:10px;
-  cursor:pointer;
-  font-weight:600;
-  text-align: center;
-}
-
-.addMovieBtn:hover{
-  background:#059669;
-}
-.adminHeader{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:25px;
-}
-
-.headerRight{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.addMovieBtn{
-    background:#10b981;
-    color:white;
-    border:none;
-    padding:12px 18px;
-    border-radius:10px;
-    font-size:14px;
-    font-weight:600;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.addMovieBtn:hover{
-    background:#059669;
-    transform:translateY(-2px);
-}
-
-.searchBar{
-    width:300px;
-    padding:12px;
-    border:none;
-    border-radius:10px;
-    background:#111827;
-    color:white;
+    transform:scale(1.08);
 }

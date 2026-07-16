@@ -52,7 +52,7 @@
 }
 
 .usersTable td{
-    padding:16px;
+    padding:5px;
     border-bottom:1px solid rgba(255,255,255,.08);
     color:#e5e7eb;
 }
@@ -120,4 +120,45 @@
     padding:30px;
     color:#9ca3af;
     font-size:18px;
+}
+.actionButtons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.roleBtn,
+.deleteBtn{
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.roleBtn{
+    background:#3b82f6;
+    color:white;
+}
+
+.roleBtn:hover{
+    background:#2563eb;
+    transform:scale(1.08);
+}
+
+.deleteBtn{
+    background:#ef4444;
+   
+    color:white;
+}
+
+.deleteBtn:hover{
+    background:#dc2626;
+    transform:scale(1.08);
 }

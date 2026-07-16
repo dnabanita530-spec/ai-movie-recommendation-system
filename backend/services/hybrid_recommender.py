@@ -18,7 +18,11 @@ tfidf = joblib.load("models/tfidf.pkl")
 
 tfidf_matrix = joblib.load("models/tfidf_matrix.pkl")
 
-cosine_sim = joblib.load("models/cosine_sim.pkl")
+# cosine_sim = joblib.load("models/cosine_sim.pkl")
+cosine_sim = joblib.load(
+    "models/cosine_sim.pkl",
+    mmap_mode="r"
+)
 
 indices = joblib.load("models/indices.pkl")
 

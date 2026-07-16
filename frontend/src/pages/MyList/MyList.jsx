@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import MovieCard from "../../components/MovieCard/MovieCard";
 import {
+  getFavorites,
   removeFavorite
 } from "../../services/favoriteService";
 import "./MyList.css";
@@ -11,34 +12,23 @@ function MyList() {
   const [favorites, setFavorites] =
     useState([]);
 
-  useEffect(() => {
+useEffect(() => {
 
-    const data =
-      JSON.parse(
-        localStorage.getItem(
-          "favorites"
-        )
-      ) || [];
+    // eslint-disable-next-line react-hooks/immutability
+    loadFavorites();
+
+}, []);
+
+const loadFavorites = async () => {
+
+    const username = localStorage.getItem("username");
+
+    const data = await getFavorites(username);
 
     setFavorites(data);
 
-  }, []);
-//   const removeMovie = (id) => {
+};
 
-//   const updated =
-//     favorites.filter(
-//       movie =>
-//         movie.movieId !== id
-//     );
-
-//   localStorage.setItem(
-//     "favorites",
-//     JSON.stringify(updated)
-//   );
-
-//   setFavorites(updated);
-
-// };
 const removeMovie = async (id) => {
 
     const username =

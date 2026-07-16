@@ -151,10 +151,7 @@ function AppRoutes() {
 
 />
 
-{/* <Route
-    path="/emotion"
-    element={<Emotion />}
-/> */}
+
 <Route
     path="/ai-chat"
     element={<AIChat />}

@@ -76,3 +76,59 @@
 .emptyRecommendations p{
     font-size:16px;
 }
+
+.pagination{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-top:35px;
+
+}
+
+.pagination button{
+
+    background:#8b5cf6;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+.pagination button:hover{
+
+    background:#7c3aed;
+
+}
+
+.pagination button:disabled{
+
+    opacity:.4;
+
+    cursor:not-allowed;
+
+}
+
+.pagination span{
+
+    color:white;
+
+    font-weight:600;
+
+}

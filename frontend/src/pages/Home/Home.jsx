@@ -1,36 +1,10 @@
-// import HeroBanner from "../../components/HeroBanner/HeroBanner";
-// import DashboardLayout from "../../layouts/DashboardLayout";
 
-// function Home() {
-
-//   return (
-
-//     <DashboardLayout>
-
-//       <HeroBanner />
-      
-
-//       <h2
-//         style={{
-//           color:"white",
-//           marginTop:"30px",
-//           marginBottom:"20px",
-//         }}
-//       >
-//         Trending Movies
-//       </h2>
-
-//     </DashboardLayout>
-
-//   );
-// }
-
-// export default Home;
 
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import MovieCard from "../../components/MovieCard/MovieCard";
 import DashboardLayout from "../../layouts/DashboardLayout";
+
 import { getPoster } from "../../services/tmdbService";
 import "./Home.css";
 
@@ -62,7 +36,7 @@ function Home() {
 
       const data = await response.json();
 
-      // setTrendingMovies(data);
+      setTrendingMovies(data);
       const moviesWithPosters =
 await Promise.all(
 
@@ -78,6 +52,7 @@ await Promise.all(
 
 );
 
+
 setTrendingMovies(
   moviesWithPosters
 );
@@ -91,26 +66,51 @@ setTrendingMovies(
 
   };
 
+  
   const loadTopRatedMovies = async () => {
 
     try {
 
-      const response = await fetch(
-        "http://127.0.0.1:8000/top-rated/"
-      );
+        const response = await fetch(
+            "http://127.0.0.1:8000/top-rated/"
+        );
 
-      const data = await response.json();
+        const data = await response.json();
 
-      setTopRatedMovies(data);
+        const moviesWithPosters = await Promise.all(
+
+            data.map(async (movie) => {
+
+                const cleanTitle = movie.title
+                    .replace(/\(\d{4}\)/g, "")
+                    .replace(", The", "")
+                    .replace(", A", "")
+                    .replace(", An", "")
+                    .trim();
+
+                return {
+
+                    ...movie,
+
+                    poster:
+                        movie.poster ||
+                        await getPoster(cleanTitle)
+
+                };
+
+            })
+
+        );
+
+        setTopRatedMovies(moviesWithPosters);
 
     } catch (error) {
 
-      console.error(error);
+        console.error(error);
 
     }
 
-  };
-
+};
   return (
 
     <DashboardLayout>
@@ -179,16 +179,7 @@ setTrendingMovies(
 
           {trendingMovies.slice(0,10).map(movie => (
 
-  // <div
-  //   key={movie.movieId}
-  //   className="homeMovieCard"
-  // >
-
-  //   <h4>{movie.title}</h4>
-
-  //   <p>{movie.genres}</p>
-
-  // </div>
+  
   <div
   key={movie.movieId}
   className="homeMovieCard"
@@ -232,7 +223,7 @@ setTrendingMovies(
           </div>
 
           <div className="movieRow">
-
+console.log(trendingMovies);
           {trendingMovies
   .slice(0, 10)
   .map(movie => (

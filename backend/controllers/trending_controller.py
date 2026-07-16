@@ -1,3 +1,5 @@
+
+    
 from fastapi import APIRouter
 import pandas as pd
 
@@ -9,30 +11,38 @@ router = APIRouter(
 movies = pd.read_csv("data/movies.csv")
 ratings = pd.read_csv("data/ratings.csv")
 
+
 @router.get("/")
 def get_trending_movies():
 
-    rating_count = (
+    rating_stats = (
         ratings.groupby("movieId")
-        .size()
-        .reset_index(name="rating_count")
+        .agg(
+            rating=("rating", "mean"),
+            rating_count=("rating", "count")
+        )
+        .reset_index()
     )
 
     trending = (
         movies.merge(
-            rating_count,
+            rating_stats,
             on="movieId"
         )
         .sort_values(
-            "rating_count",
+            by="rating_count",
             ascending=False
         )
         .head(20)
     )
 
     return trending[
-        ["movieId", "title", "genres"]
+        [
+            "movieId",
+            "title",
+            "genres",
+            "rating"
+        ]
     ].to_dict(
         orient="records"
     )
-    

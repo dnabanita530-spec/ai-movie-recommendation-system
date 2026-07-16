@@ -1,108 +1,157 @@
+
 from fastapi import APIRouter
 from sqlalchemy.orm import Session
 
 from config.database import SessionLocal
-
-from models.recommendation_log_model import (
-    RecommendationLog
-)
+from models.recommendation_log_model import RecommendationLog
 
 router = APIRouter(
-    prefix="/admin/performance",
+    prefix="/recommendation-performance",
     tags=["Recommendation Performance"]
 )
 
 
 @router.get("/")
-def get_performance():
+def recommendation_performance():
 
-    db = SessionLocal()
+    db: Session = SessionLocal()
+
     try:
 
-        logs = db.query(
-            RecommendationLog
-        ).all()
+        logs = (
+            db.query(RecommendationLog)
+            .order_by(RecommendationLog.created_at.desc())
+            .all()
+        )
 
-        total_recommendations = len(logs)
+        total = len(logs)
+
+        hybrid = len(
+            [
+                x for x in logs
+                if x.recommendation_type == "Hybrid"
+            ]
+        )
+
+        content = len(
+            [
+                x for x in logs
+                if x.recommendation_type == "Content"
+            ]
+        )
+
+        # -------------------------
+        # User Count
+        # -------------------------
 
         user_count = {}
 
-        movie_count = {}
-
-        hybrid_count = 0
-
         for log in logs:
 
-        # Most Active User
             user_count[log.username] = (
-                user_count.get(
-                    log.username,
-                    0
-                ) + 1
+                user_count.get(log.username, 0) + 1
             )
 
-        # Recommendation Type Count
-            if (
-                log.recommendation_type
-                == "Hybrid"
-            ):
-                hybrid_count += 1
+        active_users = len(user_count)
 
-        # Most Recommended Movie
-            movies = (
-                log.movies.split(",")
-            )
+        average = round(
+            total / active_users,
+            2
+        ) if active_users else 0
 
-            for movie in movies:
-
-                movie = movie.strip()
-
-                movie_count[movie] = (
-                    movie_count.get(
-                        movie,
-                        0
-                    ) + 1
-                )
-
-        most_active_user = (
-
+        most_active = (
             max(
                 user_count,
                 key=user_count.get
             )
-
-            if user_count
-
-            else "N/A"
+            if user_count else "-"
         )
 
-        most_recommended_movie = (
+        # -------------------------
+        # Movie Count
+        # -------------------------
 
+        movie_count = {}
+
+        for log in logs:
+
+            for movie in log.movies.split(","):
+
+                movie = movie.strip()
+
+                movie_count[movie] = (
+                    movie_count.get(movie, 0) + 1
+                )
+
+        most_movie = (
             max(
                 movie_count,
                 key=movie_count.get
             )
-
-            if movie_count
-
-            else "N/A"
+            if movie_count else "-"
         )
+
+        top_users = [
+
+            {
+                "user": k,
+                "count": v
+            }
+
+            for k, v in sorted(
+
+                user_count.items(),
+
+                key=lambda x: x[1],
+
+                reverse=True
+
+            )[:5]
+
+        ]
+
+        history = []
+
+        for log in logs[:15]:
+
+            history.append({
+
+                "user": log.username,
+
+                "type": log.recommendation_type,
+
+                "movies": log.movies,
+
+                "date": str(log.created_at)
+
+            })
 
         return {
 
-            "totalRecommendations":
-            total_recommendations,
+            "totalRecommendations": total,
 
-            "hybridRecommendations":
-            hybrid_count,
+            "hybridCount": hybrid,
 
-            "mostActiveUser":
-            most_active_user,
+            "contentCount": content,
 
-            "mostRecommendedMovie":
-            most_recommended_movie
+            "activeUsers": active_users,
+
+            "averagePerUser": average,
+
+            "mostActiveUser": most_active,
+
+            "mostRecommendedMovie": most_movie,
+
+            "lastRecommendation":
+            str(logs[0].created_at)
+            if logs else "-",
+
+            "topUsers": top_users,
+
+            "history": history
 
         }
+
     finally:
 
         db.close()

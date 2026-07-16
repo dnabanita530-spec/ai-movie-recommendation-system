@@ -18,6 +18,7 @@ function AdminReviews() {
 
   useEffect(() => {
 
+    // eslint-disable-next-line react-hooks/immutability
     loadReviews();
 
   }, []);
@@ -131,7 +132,7 @@ function AdminReviews() {
                       }
                     >
 
-                      Delete
+                      🗑️
 
                     </button>
 

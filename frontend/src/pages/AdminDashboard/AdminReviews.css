@@ -22,7 +22,10 @@
 .reviewsTable thead{
     background:#8b5cf6;
 }
-
+.reviewsTable tr{
+    border-bottom:1px solid rgba(255,255,255,.08);
+    padding-bottom: 4px;
+}
 .reviewsTable th{
     padding:16px;
     text-align:left;

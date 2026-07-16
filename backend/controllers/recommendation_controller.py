@@ -3,7 +3,7 @@ import pandas as pd
 import requests
 import re
 from services.tmdb_cache import load_tmdb_cache, save_tmdb_cache
-# from services.recommender import content_recommend
+
 from services.hybrid_recommender import hybrid_recommend
 router = APIRouter(
     prefix="/recommendations",

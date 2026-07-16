@@ -1,528 +1,327 @@
-import { useEffect, useState } from "react";
 
-import {
-  addMovieApi,
-  deleteMovieApi,
-  updateMovie
-} from "../../services/adminMovieService";
-import {
-  getMovies
-} from "../../services/movieService";
+import { useEffect, useState } from "react";
+import { deleteMovie, getAdminMovies, updateMovie } from "../../services/adminService";
 import "./AdminMovies.css";
+
 
 function AdminMovies() {
 
-  const [movies, setMovies] =
-    useState([]);
+    const [movies, setMovies] = useState([]);
+    const [page, setPage] = useState(1);
 
-  const [search, setSearch] =
-    useState("");
-    const [showModal, setShowModal] =
-  useState(false);
-const [showAddModal,
-  setShowAddModal] =
-    useState(false);
+const [pages, setPages] = useState(1);
 
+const [search, setSearch] = useState("");
+    const [showModal, setShowModal] = useState(false);
 
-const [selectedMovie, setSelectedMovie] =
-  useState(null);
-  const [newMovie,
-  setNewMovie] =
-    useState({
+const [selectedMovie, setSelectedMovie] = useState({
 
-      movieId: "",
+  movieId: "",
 
-      title: "",
+  title: "",
 
-      genres: ""
+  genres: ""
 
-    });
+});
 
-  useEffect(() => {
+ 
 
+    const loadMovies = async () => {
+
+    const data = await getAdminMovies(
+
+        page,
+
+        search
+
+    );
+
+    setMovies(data.movies);
+
+    setPages(data.pages);
+
+};
+ useEffect(() => {
+
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     loadMovies();
 
-  }, []);
+}, [page]);
+const handleEdit = (movie) => {
 
-  const loadMovies = async () => {
+    setSelectedMovie(movie);
 
-    try {
-
-      const data =
-        await getMovies();
-
-      setMovies(data);
-
-    } catch (error) {
-
-      console.error(error);
-
-    }
-
-  };
-
-  const deleteMovie = async (id) => {
-
-  const confirmDelete =
-    window.confirm(
-      "Delete this movie?"
-    );
-
-  if (!confirmDelete)
-    return;
-
-  try {
-
-    await deleteMovieApi(id);
-
-    const updated =
-      movies.filter(
-        movie =>
-          movie.movieId !== id
-      );
-
-    setMovies(updated);
-
-    alert(
-      "Movie Deleted"
-    );
-
-  } catch (error) {
-
-    console.error(error);
-
-  }
+    setShowModal(true);
 
 };
 
- const editMovie = (movie) => {
-
-  setSelectedMovie(movie);
-
-  setShowModal(true);
-
-};
-const handleChange = (e) => {
-
-  setSelectedMovie({
-
-    ...selectedMovie,
-
-    [e.target.name]:
-      e.target.value
-
-  });
-
-};
-const saveMovie = async () => {
-
-  try {
+const handleSave = async () => {
 
     await updateMovie(
 
-      selectedMovie.movieId,
+        selectedMovie.movieId,
 
-      {
-        title:
-          selectedMovie.title,
+        {
 
-        genres:
-          selectedMovie.genres,
+            title: selectedMovie.title,
 
-        rating:
-          selectedMovie.rating,
+            genres: selectedMovie.genres
 
-        language:
-          selectedMovie.language,
-
-        release_date:
-          selectedMovie.release_date,
-
-        overview:
-          selectedMovie.overview
-      }
+        }
 
     );
-
-    const updatedMovies =
-      movies.map(movie =>
-
-        movie.movieId ===
-        selectedMovie.movieId
-
-          ? selectedMovie
-
-          : movie
-
-      );
-
-    setMovies(updatedMovies);
 
     setShowModal(false);
 
-    alert(
-      "Movie Updated Successfully"
-    );
-
-  } catch (error) {
-
-    console.error(error);
-
-    alert(
-      "Failed to update movie"
-    );
-
-  }
+    loadMovies();
 
 };
+    return (
 
-  const filteredMovies =
-    movies.filter(movie =>
-      movie.title
-        .toLowerCase()
-        .includes(
-          search.toLowerCase()
-        )
-    );
-    const addMovie = async () => {
+        <div className="moviesPage">
 
-  try {
+            <h1>🎬 Movie Management</h1>
+            <div className="searchBar">
 
-    await addMovieApi(
-      newMovie
-    );
+<input
 
-    setMovies([
+type="text"
 
-      ...movies,
+placeholder="Search movie..."
 
-      newMovie
+value={search}
 
-    ]);
+onChange={(e)=>setSearch(e.target.value)}
 
-    setShowAddModal(
-      false
-    );
+/>
 
-    alert(
-      "Movie Added"
-    );
+<button
 
-  } catch (error) {
+onClick={() => {
 
-    console.error(error);
+setPage(1);
 
-  }
+loadMovies();
 
-};
+}}
 
-  return (
-
-    <div className="adminMoviesPage">
-
-<div className="adminHeader">
-
-  <h1>
-    🎬 Movie Management
-  </h1>
-
-  <div className="headerRight">
-
-    <button
-      className="addMovieBtn"
-      onClick={() =>
-        setShowAddModal(true)
-      }
-    >
-      ➕ Add Movie
-    </button>
-
-    <input
-      type="text"
-      className="searchBar"
-      placeholder="Search movies..."
-      value={search}
-      onChange={(e) =>
-        setSearch(e.target.value)
-      }
-    />
-
-  </div>
-
-</div>
-      {/* <button
-  className="addMovieBtn"
-  onClick={() =>
-    setShowAddModal(true)
-  }
 >
 
-  + Add Movie
+Search
 
-</button> */}
+</button>
 
-      <table className="moviesTable">
+</div>
 
-        <thead>
+            <table>
 
-          <tr>
+                <thead>
 
-            <th>ID</th>
+                    <tr>
 
-            <th>Movie Title</th>
+                        <th>ID</th>
 
-            <th>Genres</th>
+                        {/* <th>Poster</th> */}
 
-            <th>Actions</th>
+                        <th>Title</th>
 
-          </tr>
+                        <th>Genres</th>
 
-        </thead>
+                        <th>⭐ Rating</th>
 
-        <tbody>
+                        <th>Action</th>
 
-          {filteredMovies.map(
-            (movie) => (
+                    </tr>
 
-              <tr
-                key={
-                  movie.movieId
-                }
-              >
+                </thead>
 
-                <td>
-                  {movie.movieId}
-                </td>
+                <tbody>
 
-                <td>
-                  {movie.title}
-                </td>
+                    {movies.map(movie=>(
 
-                <td>
-                  {movie.genres}
-                </td>
+                        <tr key={movie.movieId}>
 
-                <td>
+                            <td>{movie.movieId}</td>
 
-                  <button
-                    className="editBtn"
-                    onClick={() =>
-                      editMovie(
-                        movie
-                      )
-                    }
-                  >
-                    ✏ Edit
-                  </button>
+                            {/* <td>
 
-                  <button
-                    className="deleteBtn"
-                    onClick={() =>
-                      deleteMovie(
-                        movie.movieId
-                      )
-                    }
-                  >
-                    🗑 Delete
-                  </button>
+                                <img
 
-                </td>
+                                  src={
+                                    movie.poster ||
+                                    "https://via.placeholder.com/70x100"
+                                  }
 
-              </tr>
+                                  alt="poster"
 
-            )
-          )}
+                                  className="poster"
 
-        </tbody>
+                                />
 
-      </table>
-      {showModal && selectedMovie && (
+                            </td> */}
 
-  <div className="modalOverlay">
+                            <td>{movie.title}</td>
 
-    <div className="modalBox">
+                            <td>{movie.genres}</td>
 
-      <h2>
-        Edit Movie
-      </h2>
+                            <td>⭐ {movie.rating}</td>
 
-      <input
-        name="title"
-        value={
-          selectedMovie.title
+                            <td>
+  <div className="actionButtons">
+
+    <button
+      className="editBtn"
+      onClick={() => handleEdit(movie)}
+      title="Edit"
+    >
+      ✏️
+    </button>
+
+    <button
+      className="deleteBtn"
+      onClick={async () => {
+        if (window.confirm("Delete this movie?")) {
+          await deleteMovie(movie.movieId);
+          loadMovies();
         }
-        onChange={
-          handleChange
-        }
-      />
-
-      <input
-        name="genres"
-        value={
-          selectedMovie.genres
-        }
-        onChange={
-          handleChange
-        }
-      />
-
-      <input
-        name="rating"
-        value={
-          selectedMovie.rating || ""
-        }
-        onChange={
-          handleChange
-        }
-      />
-
-      <input
-        name="language"
-        value={
-          selectedMovie.language || ""
-        }
-        onChange={
-          handleChange
-        }
-      />
-
-      <input
-        name="release_date"
-        value={
-          selectedMovie.release_date || ""
-        }
-        onChange={
-          handleChange
-        }
-      />
-
-      <textarea
-        name="overview"
-        rows="5"
-        value={
-          selectedMovie.overview || ""
-        }
-        onChange={
-          handleChange
-        }
-      />
-
-      <div className="modalButtons">
-
-        <button
-          className="saveBtn"
-          onClick={saveMovie}
-        >
-          Save Changes
-        </button>
-
-        <button
-          className="cancelBtn"
-          onClick={() =>
-            setShowModal(false)
-          }
-        >
-          Cancel
-        </button>
-
-      </div>
-
-    </div>
+      }}
+      title="Delete"
+    >
+      🗑️
+    </button>
 
   </div>
+</td>
 
-)}
-{showAddModal && (
+                        </tr>
 
-  <div className="modalOverlay">
+                    ))}
 
-    <div className="modalBox">
+                </tbody>
 
-      <h2>
-        Add Movie
-      </h2>
+            </table>
+            <div className="pagination">
 
-      <input
-        placeholder="Movie ID"
-        onChange={(e)=>
+<button
 
-          setNewMovie({
+disabled={page===1}
 
-            ...newMovie,
+onClick={()=>setPage(page-1)}
 
-            movieId:
-              Number(
-                e.target.value
-              )
+>
 
-          })
+Previous
 
-        }
-      />
+</button>
 
-      <input
-        placeholder="Title"
-        onChange={(e)=>
+<span>
 
-          setNewMovie({
+Page {page} of {pages}
 
-            ...newMovie,
+</span>
 
-            title:
-              e.target.value
+<button
 
-          })
+disabled={page===pages}
 
-        }
-      />
+onClick={()=>setPage(page+1)}
 
-      <input
-        placeholder="Genres"
-        onChange={(e)=>
+>
 
-          setNewMovie({
+Next
 
-            ...newMovie,
+</button>
 
-            genres:
-              e.target.value
+</div>
+            {
 
-          })
+showModal && (
 
-        }
-      />
+<div className="modalOverlay">
 
-      <div className="modalButtons">
+<div className="modal">
 
-        <button
-          className="saveBtn"
-          onClick={
-            addMovie
-          }
-        >
-          Save
-        </button>
+<h2>Edit Movie</h2>
 
-        <button
-          className="cancelBtn"
-          onClick={() =>
-            setShowAddModal(false)
-          }
-        >
-          Cancel
-        </button>
+<label>Movie Title</label>
 
-      </div>
+<input
 
-    </div>
+value={selectedMovie.title}
 
-  </div>
+onChange={(e)=>
 
-)}
+setSelectedMovie({
 
-    </div>
+...selectedMovie,
 
-  );
+title:e.target.value
+
+})
+
+}
+
+/>
+
+<label>Genres</label>
+
+<input
+
+value={selectedMovie.genres}
+
+onChange={(e)=>
+
+setSelectedMovie({
+
+...selectedMovie,
+
+genres:e.target.value
+
+})
+
+}
+
+/>
+
+<div className="modalButtons">
+
+<button
+
+className="saveBtn"
+
+onClick={handleSave}
+
+>
+
+Save
+
+</button>
+
+<button
+
+className="cancelBtn"
+
+onClick={()=>setShowModal(false)}
+
+>
+
+Cancel
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+)
+
+}
+
+        </div>
+
+    );
 
 }
 

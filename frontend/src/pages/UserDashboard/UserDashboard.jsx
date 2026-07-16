@@ -22,35 +22,10 @@ const [posters, setPosters] =
     const [reviews, setReviews] =
     useState([]);
 
-  // useEffect(() => {
-
-  //   setFavorites(
-  //     JSON.parse(
-  //       localStorage.getItem(
-  //         "favorites"
-  //       )
-  //     ) || []
-  //   );
-
-  //   setRatings(
-  //     JSON.parse(
-  //       localStorage.getItem(
-  //         "userRatings"
-  //       )
-  //     ) || []
-  //   );
-
-  //   setHistory(
-  //     JSON.parse(
-  //       localStorage.getItem(
-  //         "watchHistory"
-  //       )
-  //     ) || []
-  //   );
-
-  // }, []);
+ 
   useEffect(() => {
 
+    // eslint-disable-next-line react-hooks/immutability
     loadDashboard();
 
 }, []);
@@ -164,11 +139,7 @@ useEffect(() => {
   </Link>
 </li>
 
-{/* <li>
-  <Link to="/watch-history">
-    🕒 Watch History
-  </Link>
-</li> */}
+
     <li>
     <Link to="/history">🕒 User History</Link>
     </li>
@@ -179,11 +150,7 @@ useEffect(() => {
   </Link>
 </li>
 
-{/* <li>
-  <Link to="/liked-movies">
-    👍 Liked Movies
-  </Link>
-</li> */}
+
 
 <li>
   <Link to="/reviews">
@@ -191,17 +158,7 @@ useEffect(() => {
   </Link>
 </li>
 
-<li>
-  <Link to="/notifications">
-    🔔 Notifications
-  </Link>
-</li>
 
-<li>
-  <Link to="/settings">
-    ⚙ Settings
-  </Link>
-</li>
 
 <li>
   <Link to="/login">

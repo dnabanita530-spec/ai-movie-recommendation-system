@@ -18,46 +18,7 @@ function SmartRecommendation() {
   useState(false);
 const [tmdbMovie, setTmdbMovie] =
   useState(null);
-// const handleRecommend =
-//   async () => {
 
-//     if (!movieName) return;
-
-//     try {
-
-//       setLoading(true);
-
-//       const data =
-//         await getHybridRecommendations(
-//           movieName
-//         );
-
-//       setMovies(data);
-
-//       setStats({
-
-//         searchedMovie:
-//           movieName,
-
-//         totalRecommendations:
-//           data.length,
-
-//         algorithm:
-//           "Hybrid Recommendation"
-
-//       });
-
-//     } catch (error) {
-
-//       console.error(error);
-
-//     } finally {
-
-//       setLoading(false);
-
-//     }
-
-//   };
 const handleRecommend = async () => {
 
   if (!movieName) return;

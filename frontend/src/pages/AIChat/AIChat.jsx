@@ -90,31 +90,7 @@ setReply("");
 
             setLoading(true);
 
-            // const response = await fetch(
-
-            //     "http://127.0.0.1:8000/chatbot/chat",
-
-            //     {
-
-            //         method: "POST",
-
-            //         headers: {
-
-            //             "Content-Type": "application/json"
-
-            //         },
-
-            //         body: JSON.stringify({
-
-            //             message: userMessage
-
-            //         })
-
-            //     }
-
-            // );
-
-            // const data = await response.json();
+           
 const data = await chatWithAI(userMessage);
             setReply(data.reply);
 
@@ -359,13 +335,7 @@ title="Speak"
 
 </button>
 
-{/* <button
-onClick={sendMessage}
->
 
-Send
-
-</button> */}
 
                     <button
 

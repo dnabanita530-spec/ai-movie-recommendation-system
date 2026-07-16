@@ -36,34 +36,61 @@ ChartJS.register(
 
 function AdminDashboard() {
 
-const [stats, setStats] =
-  useState({
+// const [stats, setStats] =
+//   useState({
 
-    totalMovies: 0,
-    totalUsers: 0,
-    totalReviews: 0,
-    activeUsers: 0,
+//     totalMovies: 0,
+//     totalUsers: 0,
+//     totalReviews: 0,
+//     activeUsers: 0,
 
-    topMovies: [],
+//     topMovies: [],
 
-    genreDistribution: {}
+//     genreDistribution: {}
 
-  });
+//   });
+const [stats, setStats] = useState({
+
+    totalMovies:0,
+
+    totalUsers:0,
+
+    totalRatings:0,
+
+    totalReviews:0,
+
+    totalFavorites:0,
+
+    totalHistory:0,
+
+    totalRecommendations:0,
+
+    activeUsers:0,
+
+    topMovies:[],
+
+    genreDistribution:{},
+
+    recentActivities:[]
+
+});
 useEffect(() => {
 
+  // eslint-disable-next-line react-hooks/immutability
   loadStats();
 
 }, []);
 
+
 const loadStats = async () => {
 
-  const data =
-    await getAdminStats();
+  const data = await getAdminStats();
+
+  console.log("ADMIN DATA:", data);
 
   setStats(data);
 
 };
-
   const trafficData = {
 
     labels: [
@@ -190,22 +217,14 @@ const genreData = {
   
 
 </li>
-<li>
-  <Link to="/settings">
-    ⚙ Settings
-  </Link>
-</li>
+
   <Link
     to="/recommendation-performance"
   >
     📊 Performance
   </Link>
 
-{/* <li>
-  <Link to="/login">
-    🚪 Logout
-  </Link>
-</li> */}
+
 <li>
 
   <button
@@ -233,80 +252,132 @@ const genreData = {
 
       <div className="adminContent">
 
+        
         <div className="statsGrid">
 
-          <div className="statCard">
-           <h2>
-  {stats?.totalMovies || 0}
-</h2>
-            <p>Total Movies</p>
-          </div>
+<div className="statCard">
+<h2>{stats.totalMovies}</h2>
+<p>🎬 Movies</p>
+</div>
 
-          <div className="statCard">
-            <h2>
-              {stats?.totalUsers || 0}
-            </h2>
-            <p>Total Users</p>
-          </div>
+<div className="statCard">
+<h2>{stats.totalUsers}</h2>
+<p>👥 Users</p>
+</div>
 
-          <div className="statCard">
-            <h2>
-             {stats?.totalReviews || 0}
-            </h2>
-            <p>Total Reviews</p>
-          </div>
+<div className="statCard">
+<h2>{stats.totalRatings}</h2>
+<p>⭐ Ratings</p>
+</div>
 
-          <div className="statCard">
-            <h2>
-              {stats?.activeUsers || 0}
-            </h2>
-            <p>Active Users</p>
-          </div>
+<div className="statCard">
+<h2>{stats.totalReviews}</h2>
+<p>📝 Reviews</p>
+</div>
 
-        </div>
+<div className="statCard">
+<h2>{stats.totalFavorites}</h2>
+<p>❤️ Favorites</p>
+</div>
 
-        <div className="chartsRow">
+<div className="statCard">
+<h2>{stats.totalHistory}</h2>
+<p>👁 Watch History</p>
+</div>
 
-          <div className="chartCard">
+<div className="statCard">
+<h2>{stats.totalRecommendations}</h2>
+<p>🤖 Recommendations</p>
+</div>
 
-            <h3>
-              Monthly Traffic
-            </h3>
-
-            <Line
-              data={trafficData}
-            />
-
-          </div>
-
-          <div className="chartCard">
-
-            <h3>
-              Genre Distribution
-            </h3>
-
-            <Doughnut
-              data={genreData}
-            />
-
-          </div>
-          <div className="activityCard">
-
-  <h3>Recent Activity</h3>
-
-  <p>✔ New Ratings Added</p>
-
-  <p>✔ New Users Joined</p>
-
-  <p>✔ Recommendations Generated</p>
+<div className="statCard">
+<h2>{stats.activeUsers}</h2>
+<p>🟢 Active Users</p>
+</div>
 
 </div>
 
+        <div className="chartsRow">
+
+  <div className="leftSection">
+
+    <div className="chartCard">
+      <h3>📈 Monthly Traffic</h3>
+      <Line data={trafficData} />
+    </div>
+
+    <div className="topMovies" >
+      <h3 style={{paddingBottom:"20px"}}>🏆 Top Rated Movies</h3>
+
+      <table className="topMoviesTable">
+
+        <thead>
+
+          <tr>
+            <th>Rank</th>
+            <th>Movie</th>
+            <th>Rating</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          {(stats.topMovies || []).map((movie,index)=>(
+
+            <tr key={index}>
+
+              <td>{index+1}</td>
+
+              <td>{movie.title}</td>
+
+              <td>⭐ {movie.rating}</td>
+
+            </tr>
+
+          ))}
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+  <div className="rightSection">
+
+    <div className="chartCard">
+
+      <h3>🎭 Genre Distribution</h3>
+
+      <Doughnut data={genreData} />
+
+    </div>
+
+    <div className="activityCard">
+
+      <h3>📜 Recent Activities</h3>
+
+      {(stats.recentActivities || []).map((item,index)=>(
+
+        <div className="activityItem" key={index}>
+
+          ✔ {item.message}
+
         </div>
+
+      ))}
+
+    </div>
+
+  </div>
+
+</div>
 
         <div className="topMovies">
 
-          <h3>
+          <h3 style={{paddingBottom:"20px"}}>
             Top Movies
           </h3>
 
@@ -314,30 +385,37 @@ const genreData = {
 
   <thead>
 
+    
     <tr>
-      <th>Rank</th>
-      <th>Movie</th>
-    </tr>
+<th>Rank</th>
+<th>Movie</th>
+<th>Rating</th>
+</tr>
 
   </thead>
 
+ 
   <tbody>
 
-    {stats.topMovies.map(
-      (movie,index) => (
+{
 
-        <tr key={index}>
 
-          <td>{index + 1}</td>
+(stats.topMovies || []).map((movie,index)=>(
+<tr key={index}>
 
-          <td>{movie.title}</td>
+<td>{index+1}</td>
 
-        </tr>
+<td>{movie.title}</td>
 
-      )
-    )}
+<td>{movie.rating}</td>
 
-  </tbody>
+</tr>
+
+))
+
+}
+
+</tbody>
 
 </table>
 

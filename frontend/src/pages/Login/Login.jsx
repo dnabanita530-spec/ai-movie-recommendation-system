@@ -13,6 +13,8 @@ function Login() {
   });
 
   const handleChange = (e) => {
+    console.log("Submitting login...");
+console.log(formData);
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -27,7 +29,7 @@ function Login() {
 
       const response =
         await loginUser(formData);
-
+console.log(response);
   localStorage.setItem(
   "token",
   response.data.access_token
@@ -65,11 +67,19 @@ if (
 
     } catch (error) {
 
-      alert(
-        "Invalid Email or Password"
-      );
+  console.log("Login Error:", error);
 
-    }
+  console.log("Response:", error.response);
+
+  console.log("Message:", error.message);
+
+  alert(
+    error.response?.data?.message ||
+    error.message ||
+    "Login Failed"
+  );
+
+}
 
   };
 const token =

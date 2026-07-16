@@ -264,49 +264,35 @@ function AdminAnalytics() {
         <table>
 
           <thead>
+<tr>
 
-            <tr>
+<th>Rank</th>
 
-              <th>
-                Rank
-              </th>
+<th>Movie</th>
 
-              <th>
-                Movie
-              </th>
+<th>Rating</th>
 
-            </tr>
+</tr>
 
           </thead>
 
-          <tbody>
+         <tbody>
 
-            {
-              stats.topMovies.map(
-                (
-                  movie,
-                  index
-                ) => (
+{(stats.topMovies || []).map((movie, index) => (
 
-                  <tr
-                    key={index}
-                  >
+<tr key={index}>
 
-                    <td>
-                      {index + 1}
-                    </td>
+<td>{index + 1}</td>
 
-                    <td>
-                      {movie}
-                    </td>
+<td>{movie.title}</td>
 
-                  </tr>
+<td>⭐ {movie.rating}</td>
 
-                )
-              )
-            }
+</tr>
 
-          </tbody>
+))}
+
+</tbody>
 
         </table>
 

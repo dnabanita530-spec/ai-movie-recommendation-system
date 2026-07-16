@@ -1,44 +1,66 @@
 import { useEffect, useState } from "react";
+import {
+  getFavorites
+} from "../../services/favoriteService";
 
+import {
+  getRecommendations
+} from "../../services/recommendationService";
 import "./Recommendations.css";
 
 function Recommendations() {
 
   const [recommendations, setRecommendations] =
     useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
 
-  useEffect(() => {
+const moviesPerPage = 8;
 
-    generateRecommendations();
+ 
+useEffect(() => {
 
-  }, []);
+    // eslint-disable-next-line react-hooks/immutability
+    loadRecommendations();
 
-  const generateRecommendations = () => {
+}, []);
+const loadRecommendations = async () => {
 
-    const ratings =
-      JSON.parse(
-        localStorage.getItem("userRatings")
-      ) || [];
+    const username = localStorage.getItem("username");
 
-    const favorites =
-      JSON.parse(
-        localStorage.getItem("favorites")
-      ) || [];
+    const favorites = await getFavorites(username);
 
-    const likedMovies = [
+    if (favorites.length === 0) {
 
-      ...ratings.filter(
-        r => r.rating >= 4
-      ),
+        setRecommendations([]);
 
-      ...favorites
+        return;
 
-    ];
+    }
 
-    setRecommendations(likedMovies);
+    // First favorite movie
+    const firstMovie = favorites[0];
 
-  };
+    const movies = await getRecommendations(
+        firstMovie.movieId
+    );
 
+    setRecommendations(movies);
+
+};
+const indexOfLastMovie = currentPage * moviesPerPage;
+
+const indexOfFirstMovie =
+  indexOfLastMovie - moviesPerPage;
+
+const currentMovies =
+  recommendations.slice(
+    indexOfFirstMovie,
+    indexOfLastMovie
+  );
+
+const totalPages = Math.ceil(
+  recommendations.length / moviesPerPage
+);
   return (
 
     <div className="recommendationsPage">
@@ -66,7 +88,7 @@ function Recommendations() {
 
         <div className="recommendationsGrid">
 
-          {recommendations.map(movie => (
+         {currentMovies.map(movie => (
 
             <div
               key={movie.movieId}
@@ -102,9 +124,36 @@ function Recommendations() {
           ))}
 
         </div>
+        
 
       )}
+<div className="pagination">
 
+  <button
+    disabled={currentPage === 1}
+    onClick={() =>
+      setCurrentPage(currentPage - 1)
+    }
+  >
+    ◀ Previous
+  </button>
+
+  <span>
+
+    Page {currentPage} of {totalPages}
+
+  </span>
+
+  <button
+    disabled={currentPage === totalPages}
+    onClick={() =>
+      setCurrentPage(currentPage + 1)
+    }
+  >
+    Next ▶
+  </button>
+
+</div>
     </div>
 
   );

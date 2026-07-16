@@ -11,20 +11,10 @@ function History() {
     setHistory] =
       useState([]);
 
-  // useEffect(() => {
 
-  //   const movies =
-  //     JSON.parse(
-  //       localStorage.getItem(
-  //         "watchHistory"
-  //       )
-  //     ) || [];
-
-  //   setHistory(movies);
-
-  // }, []);
   useEffect(() => {
 
+    // eslint-disable-next-line react-hooks/immutability
     loadHistory();
 
 }, []);

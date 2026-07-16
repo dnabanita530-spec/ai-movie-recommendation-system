@@ -1,5 +1,8 @@
+
 from fastapi import APIRouter
 import pandas as pd
+
+from services.tmdb_service import get_movie_details
 
 router = APIRouter(
     prefix="/top-rated",
@@ -31,6 +34,28 @@ def get_top_rated():
         .head(20)
     )
 
-    return top_movies.to_dict(
-        orient="records"
-    )
+    result = []
+
+    for _, row in top_movies.iterrows():
+
+        tmdb = get_movie_details(row["title"])
+
+        result.append({
+
+            "movieId": int(row["movieId"]),
+
+            "title": row["title"],
+
+            "genres": row["genres"],
+
+            "rating": round(float(row["rating"]), 1),
+
+            "poster": tmdb.get("poster", ""),
+
+            "language": tmdb.get("language", ""),
+
+            "release_date": tmdb.get("release_date", "")
+
+        })
+
+    return result
