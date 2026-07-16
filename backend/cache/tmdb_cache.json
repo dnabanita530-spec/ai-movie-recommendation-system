@@ -1566,5 +1566,33 @@
         "language": "en",
         "overview": "A renowned former army scout is hired by ranchers to hunt down rustlers but finds himself on trial for the murder of a boy when he carries out his job too well. Tom Horn finds that the simple skills he knows are of no help in dealing with the ambitions of ranchers and corrupt officials as progress marches over him and the old west.",
         "release_date": "1980-03-28"
+    },
+    "You Only Live Twice (1967)": {
+        "poster": "https://image.tmdb.org/t/p/w500/9mvNd43HgTkbfPwX6MF6EoPIMIa.jpg",
+        "rating": 6.588,
+        "language": "en",
+        "overview": "A mysterious spacecraft captures Russian and American space capsules and brings the two superpowers to the brink of war. James Bond investigates the case in Japan and comes face to face with his archenemy Blofeld.",
+        "release_date": "1967-06-13"
+    },
+    "In the Line of Fire (1993)": {
+        "poster": "https://image.tmdb.org/t/p/w500/3NvOFpmyECI3DNExYMtFIRcGMsu.jpg",
+        "rating": 6.976,
+        "language": "en",
+        "overview": "Veteran Secret Service agent Frank Horrigan is a man haunted by his failure to save President Kennedy while serving protection detail in Dallas. Thirty years later, a man calling himself \"Booth\" threatens the life of the current President, forcing Horrigan to come back to protection detail to confront the ghosts from his past.",
+        "release_date": "1993-07-08"
+    },
+    "Puppet Master 4 (1993)": {
+        "poster": "https://image.tmdb.org/t/p/w500/fRIpNpZVL73MGJ7E2ZYt03tggeX.jpg",
+        "rating": 5.6,
+        "language": "en",
+        "overview": "Blade, Tunneler, and Pinhead go toe-to-toe with a team of terrifying, gremlin-like creatures known as \"Totems\" that are sent by the Egyptian demon Sutekh to recapture the magic stolen by Toulon.",
+        "release_date": "1993-11-24"
+    },
+    "Aliens (1986)": {
+        "poster": "https://image.tmdb.org/t/p/w500/r1x5JGpyqZU8PYhbs4UcrO1Xb6x.jpg",
+        "rating": 7.965,
+        "language": "en",
+        "overview": "Ripley, the sole survivor of the Nostromo's deadly encounter with the monstrous Alien, returns to Earth after drifting through space in hypersleep for 57 years. Although her story is initially met with skepticism, she agrees to accompany a team of Colonial Marines back to LV-426.",
+        "release_date": "1986-07-18"
     }
 }
